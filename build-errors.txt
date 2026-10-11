@@ -1,0 +1,334 @@
+﻿To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.2.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.15.4
+
+> Task :compileJava FAILED
+gradle.bat : I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\client\NonCreatureAffinityClient.java:31:
+ 错误: 不兼容的类型: String无法转换为Category
+At line:3 char:1
++ & "I:\DSH\work\tools\gradle-9.2.0\bin\gradle.bat" --no-daemon compile ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (I:\DSH\work\non...ng无法转换为Category:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+                "category.noncreatureaffinity"));
+                ^
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\command\AffinityCommand.java:65: 错误: 找不到符号
+                        .requires(source -> source.hasPermissionLevel(2))
+                                                  ^
+  符号:   方法 hasPermissionLevel(int)
+  位置: 类型为ServerCommandSource的变量 source
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\command\AffinityCommand.java:69: 错误: 找不到符号
+                        .requires(source -> source.hasPermissionLevel(2))
+                                                  ^
+  符号:   方法 hasPermissionLevel(int)
+  位置: 类型为ServerCommandSource的变量 source
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\command\AffinityCommand.java:72: 错误: 找不到符号
+                        .requires(source -> source.hasPermissionLevel(2))
+                                                  ^
+  符号:   方法 hasPermissionLevel(int)
+  位置: 类型为ServerCommandSource的变量 source
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\command\AffinityCommand.java:228: 错误: 找不到符号
+        for (Entity entity : player.getServerWorld().iterateEntities()) {
+                                   ^
+  符号:   方法 getServerWorld()
+  位置: 类型为ServerPlayerEntity的变量 player
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\data\AffinityAttachments.java:25: 错误: 无法将接口 Attachment
+Type<A>中的方法 initializer应用到给定类型;
+                    .initializer(CreatureAffinityData::new)
+                    ^
+  需要: 没有参数
+  找到:    CreatureAf[...]::new
+  原因: 实际参数列表和形式参数列表长度不同
+  其中, A是类型变量:
+    A扩展已在接口 AttachmentType中声明的Object
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\data\CreatureAffinityData.java:143: 错误: 无法将类 NbtCompou
+nd中的方法 getList应用到给定类型;
+        NbtList list = root.getList("entries", NbtElement.COMPOUND_TYPE);
+                           ^
+  需要: String
+  找到:    String,byte
+  原因: 实际参数列表和形式参数列表长度不同
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\data\CreatureAffinityData.java:145: 错误: 不兼容的类型: Option
+al<NbtCompound>无法转换为NbtCompound
+            NbtCompound wrapper = list.getCompound(i);
+                                                  ^
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\data\CreatureAffinityData.java:150: 错误: 不兼容的类型: Option
+al<NbtCompound>无法转换为NbtCompound
+            data.entries.put(key, PlayerAffinity.fromNbt(wrapper.getCompound("data")));
+                                                                            ^
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:39: 错误: 找不到符号
+                (payload, context) -> context.player().getServer().execute(
+                                                      ^
+  符号:   方法 getServer()
+  位置: 类 ServerPlayerEntity
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:55: 错误: 找不到符号
+        if (NonBridge.isActorBusy(player.getServerWorld(), player)) {
+                                        ^
+  符号:   方法 getServerWorld()
+  位置: 类型为ServerPlayerEntity的变量 player
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:59: 错误: 找不到符号
+        if (NonBridge.isActorBusy(player.getServerWorld(), target)) {
+                                        ^
+  符号:   方法 getServerWorld()
+  位置: 类型为ServerPlayerEntity的变量 player
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:68: 错误: 找不到符号
+        boolean started = NonBridge.startVoluntaryMating(player.getServerWorld(), player, target);
+                                                               ^
+  符号:   方法 getServerWorld()
+  位置: 类型为ServerPlayerEntity的变量 player
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:98: 错误: 找不到符号
+        ServerWorld world = player.getServerWorld();
+                                  ^
+  符号:   方法 getServerWorld()
+  位置: 类型为ServerPlayerEntity的变量 player
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\non\NonIntegration.java:133: 错误: 不兼容的类型: Set<Identifie
+r>无法转换为Set<EntityType<?>>
+            Set<EntityType<?>> types = actor.entityTypes();
+                                                        ^
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\NonCreatureAffinity.java:152: 错误: 找不到符号
+            InheritanceService.tryInheritFromParents(world, mob, config);
+            ^
+  符号:   变量 InheritanceService
+  位置: 类 NonCreatureAffinity
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:104: 错误: 不兼容的类型: PlayerEn
+tity无法转换为ServerPlayerEntity
+            notifyAffinityChange(player, creature, relation, applied, reason);
+                                 ^
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:145: 错误: 找不到符号
+                tameable.setTame(true, true);
+                        ^
+  符号:   方法 setTame(boolean,boolean)
+  位置: 类型为TameableEntity的变量 tameable
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:230: 错误: 找不到符号
+        ServerWorld world = player.getServerWorld();
+                                  ^
+  符号:   方法 getServerWorld()
+  位置: 类型为ServerPlayerEntity的变量 player
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:253: 错误: 找不到符号
+        if (!(mob.getWorld() instanceof ServerWorld world)) {
+                 ^
+  符号:   方法 getWorld()
+  位置: 类型为MobEntity的变量 mob
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:290: 错误: 找不到符号
+        PlayerAffinity relation = data.getOrCreate(parent.getUuid(), config.offspringAffinity);
+                                                                           ^
+  符号:   变量 offspringAffinity
+  位置: 类型为AffinityConfig的变量 config
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:291: 错误: 找不到符号
+        relation.setAffinity(config.offspringAffinity, config.minAffinity, config.maxAffinity);
+                                   ^
+  符号:   变量 offspringAffinity
+  位置: 类型为AffinityConfig的变量 config
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:295: 错误: 找不到符号
+                tameable.setTame(true, true);
+                        ^
+  符号:   方法 setTame(boolean,boolean)
+  位置: 类型为TameableEntity的变量 tameable
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:303: 错误: 找不到符号
+                    child.getName().getString(), parent.getName().getString(), config.offspringAffinity);
+                                                                                     ^
+  符号:   变量 offspringAffinity
+  位置: 类型为AffinityConfig的变量 config
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:312: 错误: 找不到符号
+        if (mob instanceof TameableEntity tameable && tameable.isTame()) {
+                                                              ^
+  符号:   方法 isTame()
+  位置: 类型为TameableEntity的变量 tameable
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\FriendlyDefenderSystem.java:68: 错误: 找不到符号
+        if (mob instanceof TameableEntity tameable && tameable.isTame()
+                                                              ^
+  符号:   方法 isTame()
+  位置: 类型为TameableEntity的变量 tameable
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\InheritanceService.java:66: 错误: 找不到符号
+                tameable.setTame(true, true);
+                        ^
+  符号:   方法 setTame(boolean,boolean)
+  位置: 类型为TameableEntity的变量 tameable
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\RequestSystem.java:178: 错误: 找不到符号
+
+[Incubating] Problems report is available at: file:///I:/DSH/work/noncreatureaffinity/build/reports/problems/problems-report.html
+        ServerWorld world = pair.mob.getServerWorld();
+                                    ^
+  符号:   方法 getServerWorld()
+  位置: 类型为MobEntity的记录组件 mob
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\RequestSystem.java:201: 错误: 找不到符号
+        ServerWorld world = pair.mob.getServerWorld();
+                                    ^
+  符号:   方法 getServerWorld()
+  位置: 类型为MobEntity的记录组件 mob
+I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\RequestSystem.java:239: 错误: 找不到符号
+        ServerWorld world = player.getServerWorld();
+                                  ^
+  符号:   方法 getServerWorld()
+  位置: 类型为ServerPlayerEntity的变量 player
+注: 某些消息已经过简化; 请使用 -Xdiags:verbose 重新编译以获得完整输出
+30 个错误
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\data\AffinityAttachments.java:25: 错误: 无法将接口 Attachme
+ntType<A>中的方法 initializer应用到给定类型;
+                      .initializer(CreatureAffinityData::new)
+                      ^
+    需要: 没有参数
+    找到:    CreatureAf[...]::new
+    原因: 实际参数列表和形式参数列表长度不同
+    其中, A是类型变量:
+      A扩展已在接口 AttachmentType中声明的Object
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\data\CreatureAffinityData.java:143: 错误: 无法将类 NbtComp
+ound中的方法 getList应用到给定类型;
+          NbtList list = root.getList("entries", NbtElement.COMPOUND_TYPE);
+                             ^
+    需要: String
+    找到:    String,byte
+    原因: 实际参数列表和形式参数列表长度不同
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\client\NonCreatureAffinityClient.java:31: 错误: 不兼容的类型
+: String无法转换为Category
+                  "category.noncreatureaffinity"));
+                  ^
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\data\CreatureAffinityData.java:145: 错误: 不兼容的类型: Opti
+onal<NbtCompound>无法转换为NbtCompound
+              NbtCompound wrapper = list.getCompound(i);
+                                                    ^
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\data\CreatureAffinityData.java:150: 错误: 不兼容的类型: Opti
+onal<NbtCompound>无法转换为NbtCompound
+              data.entries.put(key, PlayerAffinity.fromNbt(wrapper.getCompound("data")));
+                                                                              ^
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\non\NonIntegration.java:133: 错误: 不兼容的类型: Set<Identif
+ier>无法转换为Set<EntityType<?>>
+              Set<EntityType<?>> types = actor.entityTypes();
+                                                          ^
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:104: 错误: 不兼容的类型: Player
+Entity无法转换为ServerPlayerEntity
+              notifyAffinityChange(player, creature, relation, applied, reason);
+                                   ^
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\NonCreatureAffinity.java:152: 错误: 找不到符号
+              InheritanceService.tryInheritFromParents(world, mob, config);
+              ^
+    符号:   变量 InheritanceService
+    位置: 类 NonCreatureAffinity
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:290: 错误: 找不到符号
+          PlayerAffinity relation = data.getOrCreate(parent.getUuid(), config.offspringAffinity);
+                                                                             ^
+    符号:   变量 offspringAffinity
+    位置: 类型为AffinityConfig的变量 config
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:291: 错误: 找不到符号
+          relation.setAffinity(config.offspringAffinity, config.minAffinity, config.maxAffinity);
+                                     ^
+    符号:   变量 offspringAffinity
+    位置: 类型为AffinityConfig的变量 config
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:303: 错误: 找不到符号
+                      child.getName().getString(), parent.getName().getString(), config.offspringAffinity);
+                                                                                       ^
+    符号:   变量 offspringAffinity
+    位置: 类型为AffinityConfig的变量 config
+  注: 某些消息已经过简化; 请使用 -Xdiags:verbose 重新编译以获得完整输出
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\command\AffinityCommand.java:65: 错误: 找不到符号
+                          .requires(source -> source.hasPermissionLevel(2))
+                                                    ^
+    符号:   方法 hasPermissionLevel(int)
+    位置: 类型为ServerCommandSource的变量 source
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\command\AffinityCommand.java:69: 错误: 找不到符号
+                          .requires(source -> source.hasPermissionLevel(2))
+                                                    ^
+    符号:   方法 hasPermissionLevel(int)
+    位置: 类型为ServerCommandSource的变量 source
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\command\AffinityCommand.java:72: 错误: 找不到符号
+                          .requires(source -> source.hasPermissionLevel(2))
+                                                    ^
+    符号:   方法 hasPermissionLevel(int)
+    位置: 类型为ServerCommandSource的变量 source
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\command\AffinityCommand.java:228: 错误: 找不到符号
+          for (Entity entity : player.getServerWorld().iterateEntities()) {
+                                     ^
+    符号:   方法 getServerWorld()
+    位置: 类型为ServerPlayerEntity的变量 player
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:39: 错误: 找不到符号
+                  (payload, context) -> context.player().getServer().execute(
+                                                        ^
+    符号:   方法 getServer()
+    位置: 类 ServerPlayerEntity
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:55: 错误: 找不到符号
+          if (NonBridge.isActorBusy(player.getServerWorld(), player)) {
+                                          ^
+    符号:   方法 getServerWorld()
+    位置: 类型为ServerPlayerEntity的变量 player
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:59: 错误: 找不到符号
+          if (NonBridge.isActorBusy(player.getServerWorld(), target)) {
+                                          ^
+    符号:   方法 getServerWorld()
+    位置: 类型为ServerPlayerEntity的变量 player
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:68: 错误: 找不到符号
+          boolean started = NonBridge.startVoluntaryMating(player.getServerWorld(), player, target);
+                                                                 ^
+    符号:   方法 getServerWorld()
+    位置: 类型为ServerPlayerEntity的变量 player
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\net\AffinityNetworking.java:98: 错误: 找不到符号
+          ServerWorld world = player.getServerWorld();
+                                    ^
+    符号:   方法 getServerWorld()
+    位置: 类型为ServerPlayerEntity的变量 player
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:145: 错误: 找不到符号
+                  tameable.setTame(true, true);
+                          ^
+    符号:   方法 setTame(boolean,boolean)
+    位置: 类型为TameableEntity的变量 tameable
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:230: 错误: 找不到符号
+          ServerWorld world = player.getServerWorld();
+                                    ^
+    符号:   方法 getServerWorld()
+    位置: 类型为ServerPlayerEntity的变量 player
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:253: 错误: 找不到符号
+          if (!(mob.getWorld() instanceof ServerWorld world)) {
+                   ^
+    符号:   方法 getWorld()
+    位置: 类型为MobEntity的变量 mob
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:295: 错误: 找不到符号
+                  tameable.setTame(true, true);
+                          ^
+    符号:   方法 setTame(boolean,boolean)
+    位置: 类型为TameableEntity的变量 tameable
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\AffinityService.java:312: 错误: 找不到符号
+          if (mob instanceof TameableEntity tameable && tameable.isTame()) {
+                                                                ^
+    符号:   方法 isTame()
+    位置: 类型为TameableEntity的变量 tameable
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\FriendlyDefenderSystem.java:68: 错误: 找不到符号
+          if (mob instanceof TameableEntity tameable && tameable.isTame()
+                                                                ^
+    符号:   方法 isTame()
+    位置: 类型为TameableEntity的变量 tameable
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\InheritanceService.java:66: 错误: 找不到符号
+                  tameable.setTame(true, true);
+                          ^
+    符号:   方法 setTame(boolean,boolean)
+    位置: 类型为TameableEntity的变量 tameable
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\RequestSystem.java:178: 错误: 找不到符号
+          ServerWorld world = pair.mob.getServerWorld();
+                                      ^
+    符号:   方法 getServerWorld()
+    位置: 类型为MobEntity的记录组件 mob
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\RequestSystem.java:201: 错误: 找不到符号
+          ServerWorld world = pair.mob.getServerWorld();
+                                      ^
+    符号:   方法 getServerWorld()
+    位置: 类型为MobEntity的记录组件 mob
+  I:\DSH\work\noncreatureaffinity\src\main\java\com\nonid\affinity\service\RequestSystem.java:239: 错误: 找不到符号
+          ServerWorld world = player.getServerWorld();
+                                    ^
+    符号:   方法 getServerWorld()
+    位置: 类型为ServerPlayerEntity的变量 player
+  30 个错误
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to generate a Build Scan (powered by Develocity).
+
+BUILD FAILED in 7s
+1 actionable task: 1 executed

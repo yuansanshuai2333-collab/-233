@@ -1,0 +1,17 @@
+{
+  "pack": {
+    "pack_format": 64,
+    "supported_formats": [64, 81],
+    "min_format": 64,
+    "max_format": 81,
+    "description": "NoN Creature Affinity - dev test pack (placeholders)"
+  },
+  "animationframework": {
+    "id": "noncreatureaffinity:testpack",
+    "default_model_revision": 1,
+    "name": "Affinity Dev Test Pack",
+    "author": "NoN Creature Affinity",
+    "version": "1.0.0",
+    "description": "Minimal animation definitions used to verify the affinity mod's mating chain in a dev environment. Models are placeholders."
+  }
+}

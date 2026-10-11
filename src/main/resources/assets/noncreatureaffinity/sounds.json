@@ -1,0 +1,20 @@
+{
+  "reunion_revive": {
+    "subtitle": "subtitles.noncreatureaffinity.reunion_revive",
+    "sounds": [
+      {
+        "name": "noncreatureaffinity:reunion_revive",
+        "attenuation_distance": 12
+      }
+    ]
+  },
+  "gift_open": {
+    "subtitle": "subtitles.noncreatureaffinity.gift_open",
+    "sounds": [
+      {
+        "name": "noncreatureaffinity:gift_open",
+        "attenuation_distance": 12
+      }
+    ]
+  }
+}

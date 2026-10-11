@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "package": "com.nonid.affinity.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MemorialHudAccess",
+    "CompanionInfoEntryMixin",
+    "RequestBubbleMouseMixin",
+    "CompanionHighlightMixin",
+    "ReunionHeldItemMixin",
+    "ReunionArmedStateMixin",
+    "MerchantScreenFreeTradeMixin",
+    "HandledScreenAccess",
+    "CompanionHighlightColorMixin",
+    "ScopedItemFadeCaptureMixin",
+    "ScopedItemFadeRenderMixin",
+    "ReunionChargeModelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

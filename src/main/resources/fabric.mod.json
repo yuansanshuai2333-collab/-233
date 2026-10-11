@@ -1,0 +1,50 @@
+{
+	"schemaVersion": 1,
+	"id": "noncreatureaffinity",
+	"version": "${version}",
+	"name": "Natural Relationships",
+    "icon": "assets/noncreatureaffinity/icon.png",
+	"description": "A creature relationship and companion addon with persistent affinity, four companion modes, an affinity detector, configurable settings, and optional NeedsOfNature integration.",
+	"authors": [
+		"DSH制作",
+		"GPT审查",
+		"创意肥猫提供"
+	],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+        "jei_mod_plugin": [
+            "com.nonid.affinity.integration.jei.NaturalRelationshipsJeiPlugin"
+        ],
+		"main": [
+			"com.nonid.affinity.NonCreatureAffinity"
+		],
+		"client": [
+			"com.nonid.affinity.client.NonCreatureAffinityClient"
+		],
+		"modmenu": [
+			"com.nonid.affinity.integration.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"noncreatureaffinity.mixins.json",
+		"noncreatureaffinity.non.mixins.json",
+		"noncreatureaffinity.mixin.client.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": ">=0.141.6"
+	},
+	"recommends": {
+        "mixinextras": ">=0.5.5",
+		"needsofnature": "*",
+		"geckolib": ">=5.4.5 <6"
+	},
+	"suggests": {
+		"modmenu": "*",
+		"geckolib": ">=5.4.5 <6",
+		"trinkets": "*"
+	}
+}

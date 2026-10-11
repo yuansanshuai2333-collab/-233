@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "stage": "1",
+      "parts": [
+        {
+          "size": [
+            85,
+            72
+          ],
+          "edge_offset": [
+            -16,
+            -21
+          ],
+          "anchor": "top_left",
+          "path": "counts/agreement-1-0.png"
+        },
+        {
+          "size": [
+            80,
+            70
+          ],
+          "edge_offset": [
+            20,
+            27
+          ],
+          "anchor": "bottom_right",
+          "path": "counts/agreement-1-1.png"
+        }
+      ],
+      "component": "agreement"
+    },
+    {
+      "stage": "2",
+      "parts": [
+        {
+          "size": [
+            85,
+            73
+          ],
+          "edge_offset": [
+            -16,
+            -21
+          ],
+          "anchor": "top_left",
+          "path": "counts/agreement-2-0.png"
+        },
+        {
+          "size": [
+            75,
+            66
+          ],
+          "edge_offset": [
+            -139,
+            -21
+          ],
+          "anchor": "top_right",
+          "path": "counts/agreement-2-1.png"
+        },
+        {
+          "size": [
+            64,
+            66
+          ],
+          "edge_offset": [
+            40,
+            27
+          ],
+          "anchor": "bottom_left",
+          "path": "counts/agreement-2-2.png"
+        },
+        {
+          "size": [
+            80,
+            67
+          ],
+          "edge_offset": [
+            20,
+            26
+          ],
+          "anchor": "bottom_right",
+          "path": "counts/agreement-2-3.png"
+        }
+      ],
+      "component": "agreement"
+    },
+    {
+      "stage": "3",
+      "parts": [
+        {
+          "size": [
+            85,
+            73
+          ],
+          "edge_offset": [
+            -16,
+            -22
+          ],
+          "anchor": "top_left",
+          "path": "counts/agreement-3-0.png"
+        },
+        {
+          "size": [
+            75,
+            69
+          ],
+          "edge_offset": [
+            276,
+            -22
+          ],
+          "anchor": "top_left",
+          "path": "counts/agreement-3-1.png"
+        },
+        {
+          "size": [
+            80,
+            69
+          ],
+          "edge_offset": [
+            -277,
+            -22
+          ],
+          "anchor": "top_right",
+          "path": "counts/agreement-3-2.png"
+        },
+        {
+          "size": [
+            82,
+            77
+          ],
+          "edge_offset": [
+            21,
+            -22
+          ],
+          "anchor": "top_right",
+          "path": "counts/agreement-3-3.png"
+        },
+        {
+          "size": [
+            69,
+            66
+          ],
+          "edge_offset": [
+            -32,
+            6
+          ],
+          "anchor": "middle_left",
+          "path": "counts/agreement-3-4.png"
+        },
+        {
+          "size": [
+            72,
+            70
+          ],
+          "edge_offset": [
+            33,
+            8
+          ],
+          "anchor": "middle_right",
+          "path": "counts/agreement-3-5.png"
+        },
+        {
+          "size": [
+            68,
+            68
+          ],
+          "edge_offset": [
+            40,
+            24
+          ],
+          "anchor": "bottom_left",
+          "path": "counts/agreement-3-6.png"
+        },
+        {
+          "size": [
+            70,
+            68
+          ],
+          "edge_offset": [
+            -1,
+            24
+          ],
+          "anchor": "bottom_center",
+          "path": "counts/agreement-3-7.png"
+        },
+        {
+          "size": [
+            70,
+            68
+          ],
+          "edge_offset": [
+            -44,
+            24
+          ],
+          "anchor": "bottom_right",
+          "path": "counts/agreement-3-8.png"
+        }
+      ],
+      "component": "agreement"
+    }
+  ]
+}

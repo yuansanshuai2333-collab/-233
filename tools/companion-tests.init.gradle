@@ -1,0 +1,27 @@
+gradle.projectsEvaluated {
+    def p = gradle.rootProject
+    def out = p.layout.buildDirectory.dir('companionTest')
+    def compileProbe = p.tasks.register('compileCompanionProbe', JavaCompile) {
+        dependsOn p.tasks.named('classes')
+        source p.fileTree('src/companionTest/java') { include '**/*.java' }
+        classpath = p.sourceSets.main.compileClasspath + p.sourceSets.main.output
+        destinationDirectory = out.map { it.dir('classes') }
+        options.encoding = 'UTF-8'
+        options.release = 21
+        javaCompiler = p.tasks.compileJava.javaCompiler
+    }
+    def probeJar = p.tasks.register('companionProbeJar', Jar) {
+        dependsOn compileProbe
+        from compileProbe.map { it.destinationDirectory }
+        from p.file('src/companionTest/resources')
+        archiveFileName = 'companion-probe-dev.jar'
+        destinationDirectory = out
+    }
+    p.tasks.register('remapCompanionProbe', p.tasks.remapJar.class.superclass) {
+        dependsOn probeJar
+        inputFile = probeJar.flatMap { it.archiveFile }
+        archiveFileName = 'companion-probe.jar'
+        destinationDirectory = out
+        addNestedDependencies = false
+    }
+}

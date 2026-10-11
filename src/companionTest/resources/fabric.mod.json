@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "companion_mode_probe",
+  "version": "1.0.0",
+  "name": "Companion Mode Server Tests (development only)",
+  "environment": "server",
+  "entrypoints": { "main": ["com.nonid.affinity.probe.CompanionModeProbe"] },
+  "depends": { "fabricloader": ">=0.19.5", "fabric-api": "*", "noncreatureaffinity": "*" }
+}

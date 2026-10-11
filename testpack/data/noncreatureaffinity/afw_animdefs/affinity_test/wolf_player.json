@@ -1,0 +1,41 @@
+{
+  "display_name": "Wolf Mating",
+  "animators": ["noncreatureaffinity"],
+  "system_tags": ["normal_match"],
+  "content_tags": ["affinity_test"],
+  "weight": 1.0,
+  "attack_eligible": true,
+  "water": "none",
+  "position_anchor_actor": "partner",
+  "actors": [
+    {
+      "label": "partner",
+      "entity_types": ["minecraft:player"],
+      "activity": "passive",
+      "receiver": true
+    },
+    {
+      "label": "mob",
+      "entity_types": ["minecraft:wolf"],
+      "age": "adult",
+      "activity": "active",
+      "injector": "V"
+    }
+  ],
+  "stages": [
+    {
+      "stage": 1,
+      "loop": true,
+      "cycle_seconds": 2.0,
+      "speed": 1.0,
+      "allow_join": false
+    },
+    {
+      "stage": 2,
+      "loop": true,
+      "cycle_seconds": 1.5,
+      "use_stage": 1,
+      "stage_seconds": 4
+    }
+  ]
+}

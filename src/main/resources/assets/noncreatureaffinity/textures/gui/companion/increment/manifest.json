@@ -1,0 +1,2592 @@
+{
+  "version": 1,
+  "source": "统一关系挂边-v1\\统一挂边-增加覆盖-v2.png",
+  "filter": "nearest",
+  "threshold_rule": "r>=150,g>=125,b>=75,g/r>=0.78,b/g<=1.12",
+  "first_stage": "fully transparent",
+  "assets": [
+    {
+      "path": "assets/overlays/main-first.png",
+      "component": "main",
+      "stage": "first",
+      "size": [
+        264,
+        95
+      ],
+      "source_rect": [
+        193,
+        117,
+        457,
+        212
+      ],
+      "content_bbox": null,
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "e9d29b10c3c3cc08e1089782bba6d316d5507a5ca13b414d3500699bbb8a6567",
+      "frame_rect": [
+        0,
+        0,
+        264,
+        95
+      ]
+    },
+    {
+      "path": "assets/overlays/main-stranger.png",
+      "component": "main",
+      "stage": "stranger",
+      "size": [
+        262,
+        95
+      ],
+      "source_rect": [
+        457,
+        117,
+        719,
+        212
+      ],
+      "content_bbox": [
+        24,
+        14,
+        236,
+        74
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/main-stranger-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            24,
+            14
+          ],
+          "size": [
+            21,
+            16
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "6362e21dba1d93cd82e5750daebdd01f1882f62e9b3f4e0de5e9deccf0a4c90d"
+        },
+        {
+          "path": "assets/anchored/main-stranger-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -26,
+            -21
+          ],
+          "size": [
+            9,
+            10
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "132943260faef0e8b182c497745c6be1a5798bffd73dc51e55eb5198dd472663"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "4eea2399b7c40792f504f59fa7c42e999fb2becb778bd83361ae396499a6bf9f",
+      "frame_rect": [
+        0,
+        0,
+        262,
+        95
+      ]
+    },
+    {
+      "path": "assets/overlays/main-familiar.png",
+      "component": "main",
+      "stage": "familiar",
+      "size": [
+        265,
+        95
+      ],
+      "source_rect": [
+        719,
+        117,
+        984,
+        212
+      ],
+      "content_bbox": [
+        25,
+        14,
+        240,
+        75
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/main-familiar-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            25,
+            14
+          ],
+          "size": [
+            24,
+            20
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "d623f9795a065ac52ee43a1cce49dcc3fb923e6aa5af3acc3a8a8ff30458457b"
+        },
+        {
+          "path": "assets/anchored/main-familiar-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -25,
+            14
+          ],
+          "size": [
+            30,
+            33
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "fe01c092001bfd1f563737831a7010512bbaff7dee0dfc0fde2171a519b87f7b"
+        },
+        {
+          "path": "assets/anchored/main-familiar-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -30,
+            -20
+          ],
+          "size": [
+            10,
+            10
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "d535f9d5f42cfe8d023fad8dd5798e7a8ed559891434eefe7bdda2afd45318bd"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "eec780f89947f29398583e00eb67dd4339217c49d45070c3ab8a919044a8109d",
+      "frame_rect": [
+        0,
+        0,
+        265,
+        95
+      ]
+    },
+    {
+      "path": "assets/overlays/main-close.png",
+      "component": "main",
+      "stage": "close",
+      "size": [
+        267,
+        95
+      ],
+      "source_rect": [
+        984,
+        117,
+        1251,
+        212
+      ],
+      "content_bbox": [
+        19,
+        13,
+        244,
+        75
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/main-close-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            19,
+            13
+          ],
+          "size": [
+            43,
+            36
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "9ef15c6720f14b4da8e64d9919b8c3f33ac02854324b617a1670e9e7a3d2d4ea"
+        },
+        {
+          "path": "assets/anchored/main-close-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -23,
+            14
+          ],
+          "size": [
+            37,
+            35
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "83c454c08abe13f913643aacf7d7535eb746406acd7272bf7e2aa63f8fa6ceb5"
+        },
+        {
+          "path": "assets/anchored/main-close-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -30,
+            -20
+          ],
+          "size": [
+            11,
+            10
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "9f586588319cc908080a0fd1c4f09e757c9475997a3d51df80a6551c35a9ce4d"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "d8ee7aa81656d210bb6ca9ae42a3af9014b745c7995a6f0707f2f89a92695e19",
+      "frame_rect": [
+        0,
+        0,
+        267,
+        95
+      ]
+    },
+    {
+      "path": "assets/overlays/main-friend.png",
+      "component": "main",
+      "stage": "friend",
+      "size": [
+        266,
+        95
+      ],
+      "source_rect": [
+        1251,
+        117,
+        1517,
+        212
+      ],
+      "content_bbox": [
+        16,
+        11,
+        244,
+        80
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/main-friend-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            13,
+            11
+          ],
+          "size": [
+            75,
+            47
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "fa749e9d3bc0558fa599d94f9050b6ff8bdadcb8ed4b24ad6fd85bc35f8f8882"
+        },
+        {
+          "path": "assets/anchored/main-friend-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -22,
+            12
+          ],
+          "size": [
+            72,
+            68
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "dbb5b8bb2252160b7ead7544e4467a10e785dc3d22757e18d7e60187e4bb729f"
+        },
+        {
+          "path": "assets/anchored/main-friend-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -38,
+            -19
+          ],
+          "size": [
+            12,
+            12
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "0a1b3a8d6bb174878fd3256882c3f20055036eb918de1eefb39dca61bbbd4ded"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "6cdd052a2cbe65e64e319bb9be3aef640b455fadad974e26b34da0a50e579213",
+      "frame_rect": [
+        3,
+        0,
+        266,
+        95
+      ]
+    },
+    {
+      "path": "assets/overlays/model-first.png",
+      "component": "model",
+      "stage": "first",
+      "size": [
+        264,
+        131
+      ],
+      "source_rect": [
+        193,
+        212,
+        457,
+        343
+      ],
+      "content_bbox": null,
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "bb83902712ee4c75d7e25ec312327e869e75beaf1e9d8827c6623c680b86388f",
+      "frame_rect": [
+        0,
+        0,
+        264,
+        131
+      ]
+    },
+    {
+      "path": "assets/overlays/model-stranger.png",
+      "component": "model",
+      "stage": "stranger",
+      "size": [
+        262,
+        131
+      ],
+      "source_rect": [
+        457,
+        212,
+        719,
+        343
+      ],
+      "content_bbox": [
+        76,
+        14,
+        181,
+        112
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/model-stranger-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            76,
+            14
+          ],
+          "size": [
+            20,
+            18
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "4be9bc2081c85443ca524dc472930efdd3dc548f94b8ed85d8bcb3dcc635a9b2"
+        },
+        {
+          "path": "assets/anchored/model-stranger-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -81,
+            -19
+          ],
+          "size": [
+            9,
+            11
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "939ee2342a8ebabcf45f45d26515c307d62bf707517043afbd9663072cd3b49b"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "c40c2a4274caa9bacb8ff7c82553971f70b07a78fc809f421e85e3a633000b44",
+      "frame_rect": [
+        0,
+        0,
+        262,
+        131
+      ]
+    },
+    {
+      "path": "assets/overlays/model-familiar.png",
+      "component": "model",
+      "stage": "familiar",
+      "size": [
+        265,
+        131
+      ],
+      "source_rect": [
+        719,
+        212,
+        984,
+        343
+      ],
+      "content_bbox": [
+        76,
+        13,
+        184,
+        112
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/model-familiar-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            76,
+            13
+          ],
+          "size": [
+            26,
+            25
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "509f387859a02bbafea761c20a4e02b7a786b2bdba3fbff77f527870a1409c62"
+        },
+        {
+          "path": "assets/anchored/model-familiar-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -81,
+            14
+          ],
+          "size": [
+            19,
+            24
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "b24690d98feefa8ad0112426fd984b0cda93893f7c9d7c67721e76a65b6497b0"
+        },
+        {
+          "path": "assets/anchored/model-familiar-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -83,
+            -19
+          ],
+          "size": [
+            11,
+            11
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "f3b22aa323f85571589bf66ede917036ff446ddceb002e4d1bf13514e27dc619"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "deb8f495b952a38215ff771cf0735b253cfbe5bf53aa02d7332954e670791ef5",
+      "frame_rect": [
+        0,
+        0,
+        265,
+        131
+      ]
+    },
+    {
+      "path": "assets/overlays/model-close.png",
+      "component": "model",
+      "stage": "close",
+      "size": [
+        267,
+        131
+      ],
+      "source_rect": [
+        984,
+        212,
+        1251,
+        343
+      ],
+      "content_bbox": [
+        75,
+        11,
+        182,
+        112
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/model-close-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            75,
+            11
+          ],
+          "size": [
+            38,
+            40
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "397813cfa944896e8a876a229e4caa0a42345adb0d5263b180a26b9e41772f85"
+        },
+        {
+          "path": "assets/anchored/model-close-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -85,
+            14
+          ],
+          "size": [
+            23,
+            36
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "3f743183ed4c171d0c1e114590a8664614412b9fcceb9164119eee04f9b5e293"
+        },
+        {
+          "path": "assets/anchored/model-close-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -85,
+            -19
+          ],
+          "size": [
+            11,
+            11
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "72b2e68e2f855e33438e602f222247bb04f36ee8fbe84520e47057a45822f4fe"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "43a319e3b75b6956f958a6ccfc61f96c9ca6e4479b6d59bf766f9ef3569542d0",
+      "frame_rect": [
+        0,
+        0,
+        267,
+        131
+      ]
+    },
+    {
+      "path": "assets/overlays/model-friend.png",
+      "component": "model",
+      "stage": "friend",
+      "size": [
+        266,
+        131
+      ],
+      "source_rect": [
+        1251,
+        212,
+        1517,
+        343
+      ],
+      "content_bbox": [
+        73,
+        11,
+        185,
+        112
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/model-friend-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -81,
+            11
+          ],
+          "size": [
+            112,
+            78
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "ee3d4b513dd70ce1d03b9792296ca2e3b80c81357b18843d5ac16ad3c6337bcc"
+        },
+        {
+          "path": "assets/anchored/model-friend-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -86,
+            -19
+          ],
+          "size": [
+            11,
+            12
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "6490710b00419cd10f94234691188079bc7d0f416671997201a4ad445704d198"
+        },
+        {
+          "path": "assets/anchored/model-friend-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            87,
+            18
+          ],
+          "size": [
+            36,
+            23
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "6580c8137f998d44615b26cde22ff00a0f757154a13cec6a6db43be48d55668f"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "23db1f5c824aad9a4fceee4e348f8a997f9bca07e97de0a664b99b8de1de3393",
+      "frame_rect": [
+        0,
+        0,
+        266,
+        131
+      ]
+    },
+    {
+      "path": "assets/overlays/attribute-first.png",
+      "component": "attribute",
+      "stage": "first",
+      "size": [
+        264,
+        83
+      ],
+      "source_rect": [
+        193,
+        343,
+        457,
+        426
+      ],
+      "content_bbox": null,
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "533faece2bc6945d67333a6a32617d0ad4bb669371c25bd68049d850e8386575",
+      "frame_rect": [
+        0,
+        0,
+        264,
+        83
+      ]
+    },
+    {
+      "path": "assets/overlays/attribute-stranger.png",
+      "component": "attribute",
+      "stage": "stranger",
+      "size": [
+        262,
+        83
+      ],
+      "source_rect": [
+        457,
+        343,
+        719,
+        426
+      ],
+      "content_bbox": [
+        46,
+        17,
+        219,
+        63
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/attribute-stranger-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            46,
+            17
+          ],
+          "size": [
+            18,
+            15
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "f56d3fedb2332f9e5b44fd4810799e05efb676784972055d10004faf36c9594f"
+        },
+        {
+          "path": "assets/anchored/attribute-stranger-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -46,
+            -20
+          ],
+          "size": [
+            10,
+            10
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "1ff2863cf695271d97cdd71d2c6e8b36be4d19802d3c1e301ab28bc755f9dde7"
+        },
+        {
+          "path": "assets/anchored/attribute-stranger-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -43,
+            20
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "658ec3005ab074622f41c7d78f4c12ec9b005c9acfd6b79ed234957cb5281e43"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "0b3b9cad077b06b1d1c9f042c285be9883746ed1b5d0b5e47f8fe8ffb4d787c2",
+      "frame_rect": [
+        0,
+        0,
+        262,
+        83
+      ]
+    },
+    {
+      "path": "assets/overlays/attribute-familiar.png",
+      "component": "attribute",
+      "stage": "familiar",
+      "size": [
+        265,
+        83
+      ],
+      "source_rect": [
+        719,
+        343,
+        984,
+        426
+      ],
+      "content_bbox": [
+        43,
+        17,
+        226,
+        63
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/attribute-familiar-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            43,
+            17
+          ],
+          "size": [
+            23,
+            19
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "2555221cd492bca137cce8c78eee80a091dda52a593826ac458291a390f8d89c"
+        },
+        {
+          "path": "assets/anchored/attribute-familiar-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -47,
+            -20
+          ],
+          "size": [
+            9,
+            10
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "9cc851c7a2df461925310b0722cbd95e1790d534d7c7148fc5523c62def653f3"
+        },
+        {
+          "path": "assets/anchored/attribute-familiar-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -39,
+            17
+          ],
+          "size": [
+            24,
+            18
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "9df35efaa76059f57f392e3b22b59b113280642a290274adb52f116023407868"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "b82efabdcb67050596fbd5e3326b91633d1c153dc2dcf5b19a3f88890097c85d",
+      "frame_rect": [
+        0,
+        0,
+        265,
+        83
+      ]
+    },
+    {
+      "path": "assets/overlays/attribute-close.png",
+      "component": "attribute",
+      "stage": "close",
+      "size": [
+        267,
+        83
+      ],
+      "source_rect": [
+        984,
+        343,
+        1251,
+        426
+      ],
+      "content_bbox": [
+        38,
+        15,
+        224,
+        63
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/attribute-close-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            38,
+            15
+          ],
+          "size": [
+            34,
+            27
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "55049ecb4617197a18c4d5086e5f73db51f1f6acacf94ae5ba4160d66372ac08"
+        },
+        {
+          "path": "assets/anchored/attribute-close-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -48,
+            -20
+          ],
+          "size": [
+            11,
+            25
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "91f6a13c4a43a7f406d48f102e717147eda8ba65aa92859bec624f62d4152266"
+        },
+        {
+          "path": "assets/anchored/attribute-close-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -43,
+            15
+          ],
+          "size": [
+            42,
+            27
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "a5a304c5b2b38eeb4595242f9818565ef944cf6f5705a184fa15059aef9037fa"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "37c017052579123ff21c7bfb955698eaf13baa6b480c2d0869f34cc7afb650df",
+      "frame_rect": [
+        0,
+        0,
+        267,
+        83
+      ]
+    },
+    {
+      "path": "assets/overlays/attribute-friend.png",
+      "component": "attribute",
+      "stage": "friend",
+      "size": [
+        266,
+        83
+      ],
+      "source_rect": [
+        1251,
+        343,
+        1517,
+        426
+      ],
+      "content_bbox": [
+        37,
+        13,
+        225,
+        70
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/attribute-friend-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -41,
+            14
+          ],
+          "size": [
+            64,
+            56
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "20ad131385abc6cde0a0d66411498ececa34b419c9c480e13ed8c5f66e8ef4c2"
+        },
+        {
+          "path": "assets/anchored/attribute-friend-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            37,
+            13
+          ],
+          "size": [
+            73,
+            39
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "9ee4fb357cd7837f3a20b41f57e5c60c3911d37aff3c1eede38d342cd1f8fca3"
+        },
+        {
+          "path": "assets/anchored/attribute-friend-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -43,
+            -13
+          ],
+          "size": [
+            14,
+            29
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "8084c2598581ab76bd917372f0cca178f212a40f40228b04b00ef545bb766b99"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "e27be4449ae0743be6adc276eac432dc71b39eba5c192f206627315f888a5ce8",
+      "frame_rect": [
+        0,
+        0,
+        266,
+        83
+      ]
+    },
+    {
+      "path": "assets/overlays/ownership_status-first.png",
+      "component": "ownership_status",
+      "stage": "first",
+      "size": [
+        264,
+        91
+      ],
+      "source_rect": [
+        193,
+        426,
+        457,
+        517
+      ],
+      "content_bbox": null,
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "9cf8e950a83e84a04cf018a05a888fcd6ef8fd4a2d41ef0827e7ff05919f183b",
+      "frame_rect": [
+        0,
+        0,
+        264,
+        91
+      ]
+    },
+    {
+      "path": "assets/overlays/ownership_status-stranger.png",
+      "component": "ownership_status",
+      "stage": "stranger",
+      "size": [
+        262,
+        91
+      ],
+      "source_rect": [
+        457,
+        426,
+        719,
+        517
+      ],
+      "content_bbox": [
+        22,
+        15,
+        241,
+        71
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/ownership_status-stranger-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            22,
+            15
+          ],
+          "size": [
+            19,
+            16
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "87611dddc8dc089bccac67c1f3793722b2b5a258e903f09b6d20d450c7272b56"
+        },
+        {
+          "path": "assets/anchored/ownership_status-stranger-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -21,
+            -20
+          ],
+          "size": [
+            9,
+            12
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "003cfb00c047360bbbebeaa7a5fc5eeccec2c8d0a5d65ff1281a1d5c54b1729d"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "fde15d5f2f47accb976d57238e6cb6db1b1cdf53c162e2cf54de0935ec5d3109",
+      "frame_rect": [
+        0,
+        0,
+        262,
+        91
+      ]
+    },
+    {
+      "path": "assets/overlays/ownership_status-familiar.png",
+      "component": "ownership_status",
+      "stage": "familiar",
+      "size": [
+        265,
+        91
+      ],
+      "source_rect": [
+        719,
+        426,
+        984,
+        517
+      ],
+      "content_bbox": [
+        20,
+        15,
+        243,
+        69
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/ownership_status-familiar-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            20,
+            15
+          ],
+          "size": [
+            25,
+            21
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "48f0aff0db8a844b78f6a78a2c67e8872659d522eec384b69dc3332c2c948522"
+        },
+        {
+          "path": "assets/anchored/ownership_status-familiar-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -26,
+            -22
+          ],
+          "size": [
+            10,
+            11
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "90a90827bbb2a7e06cd8eab8c874bb122a6bb22292f48b678ddcd77c1b7fde66"
+        },
+        {
+          "path": "assets/anchored/ownership_status-familiar-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -22,
+            15
+          ],
+          "size": [
+            29,
+            21
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "2eb58e240dcd44b9d729b3d60a35ebc9435c68b93beedc9d27a5594b26d6b2f2"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "39b9757399706e98b2903e52c66e1f1e2944c2dc05486709a9b8895209bbf453",
+      "frame_rect": [
+        0,
+        0,
+        265,
+        91
+      ]
+    },
+    {
+      "path": "assets/overlays/ownership_status-close.png",
+      "component": "ownership_status",
+      "stage": "close",
+      "size": [
+        267,
+        91
+      ],
+      "source_rect": [
+        984,
+        426,
+        1251,
+        517
+      ],
+      "content_bbox": [
+        17,
+        12,
+        246,
+        70
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/ownership_status-close-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            17,
+            12
+          ],
+          "size": [
+            49,
+            32
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "85baa17a18ba633ae218bff7a936fc3248c8fdf1c0b60212fce5b7fb163558d3"
+        },
+        {
+          "path": "assets/anchored/ownership_status-close-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -21,
+            14
+          ],
+          "size": [
+            37,
+            35
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "3e60275702dedc521919256fc994262bbe72168091aa38d67c763973e9474687"
+        },
+        {
+          "path": "assets/anchored/ownership_status-close-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -27,
+            -21
+          ],
+          "size": [
+            11,
+            9
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "a9c8b31d98d8b406738a46d2d4455347452689e67b2cf495891ad4c6cdda4f13"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "13bc36f5bb1c006826e85511ee41ab619e40b1720416bdfdce13b33e2422514b",
+      "frame_rect": [
+        0,
+        0,
+        267,
+        91
+      ]
+    },
+    {
+      "path": "assets/overlays/ownership_status-friend.png",
+      "component": "ownership_status",
+      "stage": "friend",
+      "size": [
+        266,
+        91
+      ],
+      "source_rect": [
+        1251,
+        426,
+        1517,
+        517
+      ],
+      "content_bbox": [
+        16,
+        12,
+        247,
+        77
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/ownership_status-friend-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            16,
+            12
+          ],
+          "size": [
+            79,
+            43
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "c5defe51649490780daea0c7c8635d774d1ff20a7271db4229795d49afde874c"
+        },
+        {
+          "path": "assets/anchored/ownership_status-friend-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -19,
+            12
+          ],
+          "size": [
+            68,
+            63
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "8c80a82237d46bf0454a61e785577abb57447d2afe42088c658c58969cfc54ba"
+        },
+        {
+          "path": "assets/anchored/ownership_status-friend-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -29,
+            -14
+          ],
+          "size": [
+            20,
+            20
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "f7e4f6fdba75b394142bc3f56720bb9bc4ab0378b21d7baa03eca0d1167031cf"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "58ae17a23f1518f059382fbff3eea771d798b0e1e711f15188f8da799f2ae7c9",
+      "frame_rect": [
+        0,
+        0,
+        266,
+        91
+      ]
+    },
+    {
+      "path": "assets/overlays/records-first.png",
+      "component": "records",
+      "stage": "first",
+      "size": [
+        264,
+        149
+      ],
+      "source_rect": [
+        193,
+        517,
+        457,
+        666
+      ],
+      "content_bbox": null,
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "79ed9f2e0d6687b55ace9da5013bbd3c221be3a2c3c857449fa2b9d42a6b23e7",
+      "frame_rect": [
+        0,
+        0,
+        264,
+        149
+      ]
+    },
+    {
+      "path": "assets/overlays/records-stranger.png",
+      "component": "records",
+      "stage": "stranger",
+      "size": [
+        262,
+        149
+      ],
+      "source_rect": [
+        457,
+        517,
+        719,
+        666
+      ],
+      "content_bbox": [
+        25,
+        16,
+        237,
+        128
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/records-stranger-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            25,
+            16
+          ],
+          "size": [
+            20,
+            18
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "e4244ec133d5ec001390adb7b7b1e446be302bb960af07d909dd824020ca3931"
+        },
+        {
+          "path": "assets/anchored/records-stranger-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -25,
+            -21
+          ],
+          "size": [
+            10,
+            11
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "ddfdba9f7c38bc2133cf637854a633b21bd079ee891989380da91ade7ad91cd1"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "afbcd4e78d03de6fc2c06fc0a49d319faf58cae08b9ed3a622a27efb43cf4add",
+      "frame_rect": [
+        0,
+        0,
+        262,
+        149
+      ]
+    },
+    {
+      "path": "assets/overlays/records-familiar.png",
+      "component": "records",
+      "stage": "familiar",
+      "size": [
+        265,
+        149
+      ],
+      "source_rect": [
+        719,
+        517,
+        984,
+        666
+      ],
+      "content_bbox": [
+        24,
+        16,
+        238,
+        128
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/records-familiar-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            24,
+            16
+          ],
+          "size": [
+            26,
+            29
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "791d3c0add971fa505feddd97f726a3f1383e44d7fa0ef7edabc01910622acaa"
+        },
+        {
+          "path": "assets/anchored/records-familiar-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -30,
+            -21
+          ],
+          "size": [
+            10,
+            11
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "a20362a339b7ed62c73f38f1d0de327fcbed315c52ac87e3a6bafc88241cd9f1"
+        },
+        {
+          "path": "assets/anchored/records-familiar-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -27,
+            16
+          ],
+          "size": [
+            32,
+            31
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "e65dc6964207f5e093cf2ca102b7214a62e8d5d41dc98f646c0d93b41257fd5a"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "c40ef863464655d8046b1d1e2cbedc0ea5146b2eeac6c92119fa262e003c2140",
+      "frame_rect": [
+        0,
+        0,
+        265,
+        149
+      ]
+    },
+    {
+      "path": "assets/overlays/records-close.png",
+      "component": "records",
+      "stage": "close",
+      "size": [
+        267,
+        149
+      ],
+      "source_rect": [
+        984,
+        517,
+        1251,
+        666
+      ],
+      "content_bbox": [
+        21,
+        14,
+        242,
+        128
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/records-close-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            21,
+            14
+          ],
+          "size": [
+            43,
+            42
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "518df867ac23c0e75599e357457f21c8cd97caca71d0abc1f210b3303a1fabc2"
+        },
+        {
+          "path": "assets/anchored/records-close-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -30,
+            -21
+          ],
+          "size": [
+            12,
+            11
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "e8f7c82d569725152e23c0d2b432d6cc8ba8223ab2fd2de3774afba784b65188"
+        },
+        {
+          "path": "assets/anchored/records-close-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -25,
+            16
+          ],
+          "size": [
+            34,
+            43
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "34f5e1f9c678312fcc4d32dce6f175f89caddfe1fc5921e5e9b39dc8aa47d04e"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "839ecb2a77614024f711463ae86885a67e3bcdb931427c0005d647e4ceff5628",
+      "frame_rect": [
+        0,
+        0,
+        267,
+        149
+      ]
+    },
+    {
+      "path": "assets/overlays/records-friend.png",
+      "component": "records",
+      "stage": "friend",
+      "size": [
+        266,
+        149
+      ],
+      "source_rect": [
+        1251,
+        517,
+        1517,
+        666
+      ],
+      "content_bbox": [
+        18,
+        13,
+        244,
+        128
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/records-friend-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            18,
+            13
+          ],
+          "size": [
+            83,
+            62
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "7288cc2df59c4ef193de40694eff867e65884d9df5d35012c492649c428e507d"
+        },
+        {
+          "path": "assets/anchored/records-friend-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -22,
+            14
+          ],
+          "size": [
+            70,
+            79
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "66c5d1f98195d09b38ed302793e48bb501b11d6f8de707f3aaca7c66fd8389af"
+        },
+        {
+          "path": "assets/anchored/records-friend-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -27,
+            -21
+          ],
+          "size": [
+            13,
+            13
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "891858b340a8863e9a947252d73d53e68b858867f0f9f8ed66c3916a28823ee9"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "a21a076a1d9011b538366d078a883266037a20be4df347c6028f29f6a0eaf36a",
+      "frame_rect": [
+        0,
+        0,
+        266,
+        149
+      ]
+    },
+    {
+      "path": "assets/overlays/deep_count-first.png",
+      "component": "deep_count",
+      "stage": "first",
+      "size": [
+        264,
+        69
+      ],
+      "source_rect": [
+        193,
+        666,
+        457,
+        735
+      ],
+      "content_bbox": null,
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "7b6eaf9ca1bb41f6982aff44ba2268142e580c735ed58bcfc2861f333931de15",
+      "frame_rect": [
+        0,
+        0,
+        264,
+        69
+      ]
+    },
+    {
+      "path": "assets/overlays/deep_count-stranger.png",
+      "component": "deep_count",
+      "stage": "stranger",
+      "size": [
+        262,
+        69
+      ],
+      "source_rect": [
+        457,
+        666,
+        719,
+        735
+      ],
+      "content_bbox": [
+        27,
+        17,
+        236,
+        48
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/deep_count-stranger-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -26,
+            -21
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "2bb33d50936bc5767ab821da7a513a5b95223d20497a95629f6433473ce5d8e5"
+        },
+        {
+          "path": "assets/anchored/deep_count-stranger-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            27,
+            17
+          ],
+          "size": [
+            17,
+            16
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "c674345754c7907244de1315547f637575a238fc7aa9806edc9fd04ccfeca35d"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "777439f4d0e13b27772e1ef206f319e287f0d001d5bd1e55023c28e7804a98f1",
+      "frame_rect": [
+        0,
+        0,
+        262,
+        69
+      ]
+    },
+    {
+      "path": "assets/overlays/deep_count-familiar.png",
+      "component": "deep_count",
+      "stage": "familiar",
+      "size": [
+        265,
+        69
+      ],
+      "source_rect": [
+        719,
+        666,
+        984,
+        735
+      ],
+      "content_bbox": [
+        25,
+        17,
+        242,
+        48
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/deep_count-familiar-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            25,
+            17
+          ],
+          "size": [
+            18,
+            17
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "4b0edb6668bf936e99ad4e668a6ef2abd4e6e640fef5f23e4259674170b229bf"
+        },
+        {
+          "path": "assets/anchored/deep_count-familiar-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -23,
+            17
+          ],
+          "size": [
+            24,
+            19
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "c40a1d7a121e7b658f51394c6be129bd3934aae11635c60cd8d5cc7c7070f10c"
+        },
+        {
+          "path": "assets/anchored/deep_count-familiar-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -30,
+            -21
+          ],
+          "size": [
+            8,
+            9
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "fb1a5516f47c154e73067f2dd1ae7a6d5d1367c32a3ccb8567b6fe37d7323705"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "2251dae91913a6ee5a03120ff2db03bed982fcae9edf117e265935644aebdce9",
+      "frame_rect": [
+        0,
+        0,
+        265,
+        69
+      ]
+    },
+    {
+      "path": "assets/overlays/deep_count-close.png",
+      "component": "deep_count",
+      "stage": "close",
+      "size": [
+        267,
+        69
+      ],
+      "source_rect": [
+        984,
+        666,
+        1251,
+        735
+      ],
+      "content_bbox": [
+        20,
+        13,
+        244,
+        48
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/deep_count-close-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            20,
+            13
+          ],
+          "size": [
+            35,
+            28
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "399e794b4a0d32f13ced2abb83d8ebd268a331696dbcf2d2483f88fd5830ccd2"
+        },
+        {
+          "path": "assets/anchored/deep_count-close-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -23,
+            15
+          ],
+          "size": [
+            38,
+            25
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "98aa99ed4524e67242e56bfbe7013e9be9ff4c78d884e2e648ea38d8af50c5e5"
+        },
+        {
+          "path": "assets/anchored/deep_count-close-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -29,
+            -21
+          ],
+          "size": [
+            8,
+            8
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "c6d6250cb5c518438aa0430081ce7612cfd0c70ea72aad518cfb4bbbfa2192ea"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "89abbb1b11501825cbd068249a498c739b44d21307c33f1971c5a4fe34e4b4d5",
+      "frame_rect": [
+        0,
+        0,
+        267,
+        69
+      ]
+    },
+    {
+      "path": "assets/overlays/deep_count-friend.png",
+      "component": "deep_count",
+      "stage": "friend",
+      "size": [
+        266,
+        69
+      ],
+      "source_rect": [
+        1251,
+        666,
+        1517,
+        735
+      ],
+      "content_bbox": [
+        17,
+        13,
+        248,
+        64
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/deep_count-friend-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            17,
+            13
+          ],
+          "size": [
+            59,
+            32
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "56505021d9a6e8f8349e2c1ec2d47353e910874a84b2be577ce2d3a335ddc9fe"
+        },
+        {
+          "path": "assets/anchored/deep_count-friend-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -18,
+            13
+          ],
+          "size": [
+            63,
+            51
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "9265abb7260712abffa95a91751927d21ce6cb72011d4362b53aa219ccb6255d"
+        },
+        {
+          "path": "assets/anchored/deep_count-friend-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -26,
+            -27
+          ],
+          "size": [
+            10,
+            2
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "e9b42f4b0f89b5eab9c6d473646517808fc38fdcf1db8fd952883145c4953976"
+        },
+        {
+          "path": "assets/anchored/deep_count-friend-bottom_left.png",
+          "anchor": "bottom_left",
+          "edge_offset": [
+            24,
+            -19
+          ],
+          "size": [
+            13,
+            18
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "9d2eb674df46cfade4674cca9bd7c76838fccf2aa14af2f9a3ba07fdfb8033df"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "6fc834c40115346254a624835c353061131e2f1b521995a14024537a2d4f1d38",
+      "frame_rect": [
+        0,
+        0,
+        266,
+        69
+      ]
+    },
+    {
+      "path": "assets/overlays/button_tooltip-first.png",
+      "component": "button_tooltip",
+      "stage": "first",
+      "size": [
+        264,
+        80
+      ],
+      "source_rect": [
+        193,
+        735,
+        457,
+        815
+      ],
+      "content_bbox": null,
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "8497c1e2bbadacd3f348ed324f1e276293b63e01303e616a5e6d0f7afc349edf",
+      "frame_rect": [
+        0,
+        0,
+        264,
+        80
+      ]
+    },
+    {
+      "path": "assets/overlays/button_tooltip-stranger.png",
+      "component": "button_tooltip",
+      "stage": "stranger",
+      "size": [
+        262,
+        80
+      ],
+      "source_rect": [
+        457,
+        735,
+        719,
+        815
+      ],
+      "content_bbox": [
+        55,
+        15,
+        206,
+        58
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/button_tooltip-stranger-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            55,
+            15
+          ],
+          "size": [
+            19,
+            15
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "54fa8472a9fdc9f064853a3123d2c46f8d3ac1701ccfcedcd15f9c50ba9fe683"
+        },
+        {
+          "path": "assets/anchored/button_tooltip-stranger-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -56,
+            -22
+          ],
+          "size": [
+            7,
+            10
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "d618bb80923e27cff0c8905a1230248f8e08c572cccf1da76b0387e567e95f31"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "330f97e1b11f79ddd20def2818143555b0c1d30ffe02bfc784f2746b8b8bf287",
+      "frame_rect": [
+        0,
+        0,
+        262,
+        80
+      ]
+    },
+    {
+      "path": "assets/overlays/button_tooltip-familiar.png",
+      "component": "button_tooltip",
+      "stage": "familiar",
+      "size": [
+        265,
+        80
+      ],
+      "source_rect": [
+        719,
+        735,
+        984,
+        815
+      ],
+      "content_bbox": [
+        49,
+        14,
+        211,
+        58
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/button_tooltip-familiar-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            49,
+            14
+          ],
+          "size": [
+            27,
+            25
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "fe7ea38644fe3a338629a07372e87e37c55804b6d83de0ff233dbd1d14980d10"
+        },
+        {
+          "path": "assets/anchored/button_tooltip-familiar-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -54,
+            14
+          ],
+          "size": [
+            23,
+            20
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "f77d4569e7fafe62d6252202529068bf7264a8575ac801a68df79113e5693561"
+        },
+        {
+          "path": "assets/anchored/button_tooltip-familiar-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -58,
+            -22
+          ],
+          "size": [
+            8,
+            9
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "398956c2c67e2353563f2b90b33effbeaf5c2f5035482b374037928fd9497d9a"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "20134f87dff7620955fd1aeb14249acd94364b8632adcdda5d1726ac887cc9ca",
+      "frame_rect": [
+        0,
+        0,
+        265,
+        80
+      ]
+    },
+    {
+      "path": "assets/overlays/button_tooltip-close.png",
+      "component": "button_tooltip",
+      "stage": "close",
+      "size": [
+        267,
+        80
+      ],
+      "source_rect": [
+        984,
+        735,
+        1251,
+        815
+      ],
+      "content_bbox": [
+        49,
+        13,
+        217,
+        59
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/button_tooltip-close-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -56,
+            -21
+          ],
+          "size": [
+            9,
+            11
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "3b8e00100021932638558b8626275589b7a54d7d5cdfe64ddacae29fc33dc03f"
+        },
+        {
+          "path": "assets/anchored/button_tooltip-close-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -50,
+            14
+          ],
+          "size": [
+            33,
+            28
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "18bb9a2858330ff121de4da128ca721b8bfe580b9ace337b6c6a226206aa4959"
+        },
+        {
+          "path": "assets/anchored/button_tooltip-close-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            49,
+            13
+          ],
+          "size": [
+            39,
+            27
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "4695081b784528362da75f2d9e8286414aac5d00335d9604451032d1f3960110"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "0b7d69701f35f523e3582833166057fafdbaab69f69488d04ab0f83023f9331b",
+      "frame_rect": [
+        0,
+        0,
+        267,
+        80
+      ]
+    },
+    {
+      "path": "assets/overlays/button_tooltip-friend.png",
+      "component": "button_tooltip",
+      "stage": "friend",
+      "size": [
+        266,
+        80
+      ],
+      "source_rect": [
+        1251,
+        735,
+        1517,
+        815
+      ],
+      "content_bbox": [
+        45,
+        12,
+        219,
+        69
+      ],
+      "parts": [
+        {
+          "path": "assets/anchored/button_tooltip-friend-top_right.png",
+          "anchor": "top_right",
+          "edge_offset": [
+            -47,
+            13
+          ],
+          "size": [
+            57,
+            56
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "38159a2a567f0ba3033a9fbf43cc2fe2489e3b084b51a9abb9f22bc906811017"
+        },
+        {
+          "path": "assets/anchored/button_tooltip-friend-top_left.png",
+          "anchor": "top_left",
+          "edge_offset": [
+            45,
+            12
+          ],
+          "size": [
+            56,
+            37
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "651b471b3a4dfc32db19c90a03760f9f1a98c32eacaaabbe20679e5605412409"
+        },
+        {
+          "path": "assets/anchored/button_tooltip-friend-bottom_right.png",
+          "anchor": "bottom_right",
+          "edge_offset": [
+            -48,
+            -43
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "draw_rule": "left/top: edge+offset; right/bottom: edge+offset-size; multiply size and offset by common decoration_scale",
+          "sha256": "41dcd6edb84a3a6b4f8a9fa74a788a6c8cbfce4f2f15e738a9422d5514da81af"
+        }
+      ],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "e3cdf43e5b4247ddfbe6c648d351bac375b3e70d70e7ededce7035631f2cff05",
+      "frame_rect": [
+        0,
+        0,
+        266,
+        80
+      ]
+    },
+    {
+      "path": "assets/overlays/placeholder-first.png",
+      "component": "placeholder",
+      "stage": "first",
+      "size": [
+        264,
+        134
+      ],
+      "source_rect": [
+        193,
+        815,
+        457,
+        949
+      ],
+      "content_bbox": null,
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "bb134c487754ff7520b00999114644e6ca9d35cde3f7d068b048b5102bec3a87",
+      "frame_rect": [
+        0,
+        0,
+        264,
+        134
+      ]
+    },
+    {
+      "path": "assets/overlays/placeholder-stranger.png",
+      "component": "placeholder",
+      "stage": "stranger",
+      "size": [
+        262,
+        134
+      ],
+      "source_rect": [
+        457,
+        815,
+        719,
+        949
+      ],
+      "content_bbox": [
+        87,
+        32,
+        172,
+        97
+      ],
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "32d39c757646b436b3625c180bedbf848f506a9c4a50e73dc4d759ddbd015477",
+      "frame_rect": [
+        0,
+        0,
+        262,
+        134
+      ]
+    },
+    {
+      "path": "assets/overlays/placeholder-familiar.png",
+      "component": "placeholder",
+      "stage": "familiar",
+      "size": [
+        265,
+        134
+      ],
+      "source_rect": [
+        719,
+        815,
+        984,
+        949
+      ],
+      "content_bbox": [
+        87,
+        33,
+        176,
+        97
+      ],
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "a9a30a7724a832f960baee419e06384c486626487b0af0f1c4e668fb3cdf07cd",
+      "frame_rect": [
+        0,
+        0,
+        265,
+        134
+      ]
+    },
+    {
+      "path": "assets/overlays/placeholder-close.png",
+      "component": "placeholder",
+      "stage": "close",
+      "size": [
+        267,
+        134
+      ],
+      "source_rect": [
+        984,
+        815,
+        1251,
+        949
+      ],
+      "content_bbox": [
+        89,
+        20,
+        178,
+        96
+      ],
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "3589e46ec9d8006177635db87e98e739fbc15e25a632f2462b844cc80af125ec",
+      "frame_rect": [
+        0,
+        0,
+        267,
+        134
+      ]
+    },
+    {
+      "path": "assets/overlays/placeholder-friend.png",
+      "component": "placeholder",
+      "stage": "friend",
+      "size": [
+        266,
+        134
+      ],
+      "source_rect": [
+        1251,
+        815,
+        1517,
+        949
+      ],
+      "content_bbox": [
+        86,
+        15,
+        175,
+        100
+      ],
+      "parts": [],
+      "status": "runtime_overlay_source_pixels",
+      "nine_slice": null,
+      "sha256": "4f9b3a01b79d5eb582652046d126e0f38624d7c8a43402ee540cb007dd2a2a4d",
+      "frame_rect": [
+        0,
+        0,
+        266,
+        134
+      ]
+    }
+  ],
+  "runtime_tested": false,
+  "attribute_assets": [
+    {
+      "path": "assets/attributes/attack-close.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/attack-close.png",
+      "sha256": "a81cfc6b60557c451632cb5944338ce1edba1946649273199d792de96271f3d0",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/attack-familiar.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/attack-familiar.png",
+      "sha256": "b4c131e6ab7349a72d79e5577742180954a83a08e97b734c8156c90c0d5e2e0f",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/attack-first.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/attack-first.png",
+      "sha256": "aecba7b093e62544b32dd04c0cd0c796b3436db4265226569ec5990bbe22faad",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/attack-friend.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/attack-friend.png",
+      "sha256": "f233d37d1d4e88353a59387eee14973742e2045c493c1173fc63ad2f5147370d",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/attack-stranger.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/attack-stranger.png",
+      "sha256": "17e1595fc311ed0d3976f04eaffed3514173228ab3a1d465322c931736f6a1b6",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/defense-close.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/defense-close.png",
+      "sha256": "dc1c4691788058fc36b08d70b9c287128f67ad4f830d6db494003b30bafc55f2",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/defense-familiar.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/defense-familiar.png",
+      "sha256": "e34d9252a2b9a026e47f44cf68ceeb574b991f2b5c455a66d2f624e2831b2667",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/defense-first.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/defense-first.png",
+      "sha256": "c90b7b4e48a5a04f6cff2facbda20296c9f2dc59d3cf008eaa50df2c4bd5d122",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/defense-friend.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/defense-friend.png",
+      "sha256": "dce43e8da15d81bec23e471b8584e2f3392ed96c417fbfadaf9f829fb14702b0",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/defense-stranger.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/defense-stranger.png",
+      "sha256": "1443b562c7cef55633c2724bef86e629676a422d76b0034af0d24ca7f5917f5d",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/regeneration-close.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 2,
+      "source": "开发素材/属性图标-v2/assets/regeneration-close.png",
+      "sha256": "9ac5d16750e559ca4faca92a20a3d7155c185e7831f203723e1ac8be52b60285",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/regeneration-familiar.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/regeneration-familiar.png",
+      "sha256": "8299d15e1495be2786582f971f9e9da94979e7dbde89292878aa1723a3dd7443",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/regeneration-first.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/regeneration-first.png",
+      "sha256": "6802d93fa657975ff8519fb995c92b4ceb23c94b113b9af7e9b46dd8a433c1b5",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/regeneration-friend.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/regeneration-friend.png",
+      "sha256": "9f5d650a493a564f56990eaa126d22cd11467762afbbdc12736b40861c320a04",
+      "nine_slice": null
+    },
+    {
+      "path": "assets/attributes/regeneration-stranger.png",
+      "size": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "status": "runtime_asset_cleaned",
+      "removed_isolated_pixels": 0,
+      "source": "开发素材/属性图标-v2/assets/regeneration-stranger.png",
+      "sha256": "7754ecf6331c2954a3e977844815e654fa2df9b5fd0b607ac5e121064be8f2bc",
+      "nine_slice": null
+    }
+  ],
+  "validation": {
+    "preserved_rgb": "passed",
+    "anchored_reconstruction": "exact_match",
+    "attribute_alpha": "binary",
+    "runtime_gui": "not_tested"
+  }
+}

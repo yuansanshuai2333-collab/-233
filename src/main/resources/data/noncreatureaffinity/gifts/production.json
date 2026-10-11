@@ -1,0 +1,834 @@
+{
+  "species": {
+    "cow": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "wheat_seeds",
+        "dandelion",
+        "poppy",
+        "brown_mushroom",
+        "red_mushroom"
+      ]
+    },
+    "mooshroom": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "wheat_seeds",
+        "dandelion",
+        "poppy",
+        "brown_mushroom",
+        "red_mushroom"
+      ]
+    },
+    "sheep": {
+      "habit": "grazer",
+      "items": [
+        "white_wool",
+        "wheat",
+        "dandelion",
+        "poppy"
+      ]
+    },
+    "pig": {
+      "habit": "grazer",
+      "items": [
+        "carrot",
+        "potato",
+        "beetroot",
+        "brown_mushroom",
+        "red_mushroom"
+      ]
+    },
+    "horse": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "apple",
+        "carrot",
+        "hay_block"
+      ]
+    },
+    "donkey": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "apple",
+        "carrot",
+        "hay_block"
+      ]
+    },
+    "mule": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "apple",
+        "carrot",
+        "hay_block"
+      ]
+    },
+    "skeleton_horse": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "apple",
+        "carrot",
+        "hay_block"
+      ]
+    },
+    "zombie_horse": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "apple",
+        "carrot",
+        "hay_block"
+      ]
+    },
+    "camel": {
+      "habit": "grazer",
+      "items": [
+        "cactus",
+        "sand",
+        "dead_bush",
+        "wheat"
+      ]
+    },
+    "camel_husk": {
+      "habit": "undead",
+      "items": [
+        "sand",
+        "dead_bush",
+        "bone",
+        "rotten_flesh"
+      ]
+    },
+    "goat": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "snowball",
+        "dandelion",
+        "spruce_sapling"
+      ]
+    },
+    "llama": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "hay_block",
+        "brown_mushroom"
+      ]
+    },
+    "trader_llama": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "hay_block",
+        "brown_mushroom"
+      ]
+    },
+    "rabbit": {
+      "habit": "grazer",
+      "items": [
+        "carrot",
+        "dandelion",
+        "wheat_seeds",
+        "beetroot"
+      ]
+    },
+    "panda": {
+      "habit": "grazer",
+      "items": [
+        "bamboo",
+        "sugar_cane",
+        "melon_slice"
+      ]
+    },
+    "sniffer": {
+      "habit": "grazer",
+      "items": [
+        "torchflower_seeds",
+        "pitcher_pod",
+        "wheat_seeds",
+        "moss_block"
+      ]
+    },
+    "chicken": {
+      "habit": "grazer",
+      "items": [
+        "egg",
+        "feather",
+        "wheat_seeds",
+        "beetroot_seeds",
+        "pumpkin_seeds",
+        "melon_seeds"
+      ]
+    },
+    "parrot": {
+      "habit": "grazer",
+      "items": [
+        "wheat_seeds",
+        "pumpkin_seeds",
+        "melon_seeds",
+        "beetroot_seeds",
+        "cocoa_beans"
+      ]
+    },
+    "turtle": {
+      "habit": "aquatic",
+      "items": [
+        "seagrass",
+        "kelp",
+        "sand",
+        "clay_ball"
+      ]
+    },
+    "bee": {
+      "habit": "grazer",
+      "items": [
+        "honeycomb",
+        "dandelion",
+        "poppy",
+        "cornflower"
+      ]
+    },
+    "armadillo": {
+      "habit": "forager",
+      "items": [
+        "armadillo_scute",
+        "spider_eye",
+        "brown_mushroom"
+      ]
+    },
+    "bat": {
+      "habit": "forager",
+      "items": [
+        "brown_mushroom",
+        "red_mushroom",
+        "glow_berries"
+      ]
+    },
+    "frog": {
+      "habit": "aquatic",
+      "items": [
+        "slime_ball",
+        "seagrass",
+        "lily_pad"
+      ]
+    },
+    "tadpole": {
+      "habit": "aquatic",
+      "items": [
+        "slime_ball",
+        "seagrass",
+        "lily_pad"
+      ]
+    },
+    "cat": {
+      "habit": "hunter",
+      "items": [
+        "cod",
+        "salmon",
+        "feather",
+        "chicken",
+        "string"
+      ]
+    },
+    "ocelot": {
+      "habit": "hunter",
+      "items": [
+        "cod",
+        "salmon",
+        "feather",
+        "chicken",
+        "string"
+      ]
+    },
+    "fox": {
+      "habit": "hunter",
+      "items": [
+        "sweet_berries",
+        "glow_berries",
+        "chicken",
+        "rabbit",
+        "feather"
+      ]
+    },
+    "wolf": {
+      "habit": "hunter",
+      "items": [
+        "bone",
+        "chicken",
+        "rabbit",
+        "mutton",
+        "beef"
+      ]
+    },
+    "polar_bear": {
+      "habit": "hunter",
+      "items": [
+        "cod",
+        "salmon",
+        "snowball"
+      ]
+    },
+    "axolotl": {
+      "habit": "aquatic",
+      "items": [
+        "cod",
+        "salmon",
+        "tropical_fish",
+        "clay_ball"
+      ]
+    },
+    "dolphin": {
+      "habit": "aquatic",
+      "items": [
+        "cod",
+        "salmon",
+        "kelp",
+        "prismarine_shard"
+      ]
+    },
+    "cod": {
+      "habit": "aquatic",
+      "items": [
+        "kelp",
+        "seagrass",
+        "clay_ball",
+        "sand"
+      ]
+    },
+    "salmon": {
+      "habit": "aquatic",
+      "items": [
+        "kelp",
+        "seagrass",
+        "clay_ball",
+        "sand"
+      ]
+    },
+    "tropical_fish": {
+      "habit": "aquatic",
+      "items": [
+        "kelp",
+        "seagrass",
+        "clay_ball",
+        "sand"
+      ]
+    },
+    "pufferfish": {
+      "habit": "aquatic",
+      "items": [
+        "kelp",
+        "seagrass",
+        "clay_ball",
+        "sand"
+      ]
+    },
+    "nautilus": {
+      "habit": "aquatic",
+      "items": [
+        "kelp",
+        "seagrass",
+        "clay_ball",
+        "sand"
+      ]
+    },
+    "squid": {
+      "habit": "aquatic",
+      "items": [
+        "ink_sac",
+        "kelp",
+        "clay_ball"
+      ]
+    },
+    "glow_squid": {
+      "habit": "aquatic",
+      "items": [
+        "glow_ink_sac",
+        "glow_berries",
+        "clay_ball"
+      ]
+    },
+    "guardian": {
+      "habit": "aquatic",
+      "items": [
+        "prismarine_shard",
+        "prismarine_crystals",
+        "cod",
+        "kelp"
+      ]
+    },
+    "elder_guardian": {
+      "habit": "aquatic",
+      "items": [
+        "prismarine_shard",
+        "prismarine_crystals",
+        "cod",
+        "kelp"
+      ]
+    },
+    "zombie_nautilus": {
+      "habit": "undead_aquatic",
+      "items": [
+        "rotten_flesh",
+        "copper_ingot",
+        "kelp",
+        "clay_ball"
+      ]
+    },
+    "drowned": {
+      "habit": "undead_aquatic",
+      "items": [
+        "rotten_flesh",
+        "copper_ingot",
+        "kelp",
+        "clay_ball"
+      ]
+    },
+    "allay": {
+      "habit": "collector",
+      "items": [
+        "amethyst_shard",
+        "paper",
+        "string",
+        "glow_berries"
+      ]
+    },
+    "villager": {
+      "habit": "collector",
+      "items": [
+        "wheat",
+        "bread",
+        "carrot",
+        "potato",
+        "beetroot",
+        "paper",
+        "emerald"
+      ]
+    },
+    "wandering_trader": {
+      "habit": "collector",
+      "items": [
+        "wheat",
+        "bread",
+        "carrot",
+        "potato",
+        "beetroot",
+        "paper",
+        "emerald"
+      ]
+    },
+    "iron_golem": {
+      "habit": "collector",
+      "items": [
+        "iron_ingot",
+        "poppy",
+        "dandelion"
+      ]
+    },
+    "copper_golem": {
+      "habit": "collector",
+      "items": [
+        "copper_ingot",
+        "copper_nugget",
+        "redstone"
+      ]
+    },
+    "snow_golem": {
+      "habit": "forager",
+      "items": [
+        "snowball",
+        "pumpkin",
+        "ice"
+      ]
+    },
+    "zombie": {
+      "habit": "undead",
+      "items": [
+        "rotten_flesh",
+        "iron_ingot",
+        "carrot",
+        "potato"
+      ]
+    },
+    "zombie_villager": {
+      "habit": "undead",
+      "items": [
+        "rotten_flesh",
+        "iron_ingot",
+        "carrot",
+        "potato"
+      ]
+    },
+    "husk": {
+      "habit": "undead",
+      "items": [
+        "rotten_flesh",
+        "iron_ingot",
+        "carrot",
+        "potato"
+      ]
+    },
+    "giant": {
+      "habit": "undead",
+      "items": [
+        "rotten_flesh",
+        "iron_ingot",
+        "carrot",
+        "potato"
+      ]
+    },
+    "skeleton": {
+      "habit": "undead",
+      "items": [
+        "bone",
+        "arrow",
+        "flint"
+      ]
+    },
+    "stray": {
+      "habit": "undead",
+      "items": [
+        "bone",
+        "arrow",
+        "flint"
+      ]
+    },
+    "parched": {
+      "habit": "undead",
+      "items": [
+        "bone",
+        "arrow",
+        "flint"
+      ]
+    },
+    "bogged": {
+      "habit": "undead",
+      "items": [
+        "bone",
+        "arrow",
+        "brown_mushroom",
+        "red_mushroom"
+      ]
+    },
+    "wither_skeleton": {
+      "habit": "nether",
+      "items": [
+        "bone",
+        "coal"
+      ]
+    },
+    "wither": {
+      "habit": "nether",
+      "items": [
+        "bone",
+        "coal",
+        "soul_sand"
+      ]
+    },
+    "spider": {
+      "habit": "hunter",
+      "items": [
+        "string",
+        "spider_eye"
+      ]
+    },
+    "cave_spider": {
+      "habit": "hunter",
+      "items": [
+        "string",
+        "spider_eye"
+      ]
+    },
+    "creeper": {
+      "habit": "forager",
+      "items": [
+        "gunpowder",
+        "flint",
+        "charcoal"
+      ]
+    },
+    "slime": {
+      "habit": "forager",
+      "items": [
+        "slime_ball",
+        "clay_ball"
+      ]
+    },
+    "magma_cube": {
+      "habit": "nether",
+      "items": [
+        "magma_cream",
+        "basalt",
+        "blackstone"
+      ]
+    },
+    "blaze": {
+      "habit": "nether",
+      "items": [
+        "blaze_rod",
+        "glowstone_dust",
+        "coal"
+      ]
+    },
+    "ghast": {
+      "habit": "nether",
+      "items": [
+        "ghast_tear",
+        "gunpowder",
+        "quartz"
+      ]
+    },
+    "happy_ghast": {
+      "habit": "forager",
+      "items": [
+        "snowball",
+        "ice",
+        "packed_ice"
+      ]
+    },
+    "strider": {
+      "habit": "nether",
+      "items": [
+        "string",
+        "warped_fungus",
+        "crimson_fungus"
+      ]
+    },
+    "hoglin": {
+      "habit": "hunter",
+      "items": [
+        "crimson_fungus",
+        "brown_mushroom",
+        "warped_fungus"
+      ]
+    },
+    "zoglin": {
+      "habit": "hunter",
+      "items": [
+        "crimson_fungus",
+        "brown_mushroom",
+        "warped_fungus"
+      ]
+    },
+    "piglin": {
+      "habit": "collector",
+      "items": [
+        "gold_nugget",
+        "gold_ingot",
+        "quartz",
+        "string"
+      ]
+    },
+    "piglin_brute": {
+      "habit": "collector",
+      "items": [
+        "gold_nugget",
+        "gold_ingot",
+        "quartz",
+        "string"
+      ]
+    },
+    "zombified_piglin": {
+      "habit": "collector",
+      "items": [
+        "gold_nugget",
+        "gold_ingot",
+        "quartz",
+        "string"
+      ]
+    },
+    "enderman": {
+      "habit": "end",
+      "items": [
+        "ender_pearl",
+        "chorus_fruit",
+        "end_stone"
+      ]
+    },
+    "endermite": {
+      "habit": "end",
+      "items": [
+        "ender_pearl",
+        "chorus_fruit",
+        "end_stone"
+      ]
+    },
+    "shulker": {
+      "habit": "end",
+      "items": [
+        "shulker_shell",
+        "chorus_fruit",
+        "end_stone"
+      ]
+    },
+    "ender_dragon": {
+      "habit": "end",
+      "items": [
+        "chorus_fruit",
+        "obsidian",
+        "end_stone"
+      ]
+    },
+    "phantom": {
+      "habit": "hunter",
+      "items": [
+        "phantom_membrane",
+        "bone",
+        "feather"
+      ]
+    },
+    "witch": {
+      "habit": "collector",
+      "items": [
+        "redstone",
+        "glowstone_dust",
+        "sugar",
+        "stick",
+        "glass_bottle",
+        "spider_eye"
+      ]
+    },
+    "evoker": {
+      "habit": "collector",
+      "items": [
+        "paper",
+        "lapis_lazuli",
+        "emerald",
+        "amethyst_shard"
+      ]
+    },
+    "illusioner": {
+      "habit": "collector",
+      "items": [
+        "paper",
+        "lapis_lazuli",
+        "emerald",
+        "amethyst_shard"
+      ]
+    },
+    "vex": {
+      "habit": "collector",
+      "items": [
+        "paper",
+        "lapis_lazuli",
+        "emerald",
+        "amethyst_shard"
+      ]
+    },
+    "pillager": {
+      "habit": "collector",
+      "items": [
+        "arrow",
+        "emerald",
+        "iron_ingot",
+        "string"
+      ]
+    },
+    "vindicator": {
+      "habit": "collector",
+      "items": [
+        "arrow",
+        "emerald",
+        "iron_ingot",
+        "string"
+      ]
+    },
+    "ravager": {
+      "habit": "grazer",
+      "items": [
+        "wheat",
+        "hay_block",
+        "carrot"
+      ]
+    },
+    "breeze": {
+      "habit": "collector",
+      "items": [
+        "breeze_rod",
+        "wind_charge",
+        "copper_ingot"
+      ]
+    },
+    "warden": {
+      "habit": "forager",
+      "items": [
+        "sculk",
+        "sculk_vein",
+        "bone"
+      ]
+    },
+    "silverfish": {
+      "habit": "forager",
+      "items": [
+        "flint",
+        "cobblestone",
+        "stone",
+        "iron_nugget"
+      ]
+    },
+    "creaking": {
+      "habit": "forager",
+      "items": [
+        "resin_clump",
+        "pale_oak_sapling",
+        "pale_moss_block"
+      ]
+    }
+  },
+  "utility": [
+    "stick",
+    "coal",
+    "charcoal",
+    "iron_nugget",
+    "copper_ingot",
+    "redstone",
+    "lapis_lazuli",
+    "paper",
+    "wheat",
+    "bread",
+    "torch",
+    "string"
+  ],
+  "ultimate": [
+    "elytra",
+    "totem_of_undying",
+    "heavy_core",
+    "ancient_debris",
+    "netherite_scrap",
+    "enchanted_golden_apple",
+    "netherite_upgrade_smithing_template",
+    "netherite_ingot",
+    "trident",
+    "mace",
+    "netherite_pickaxe",
+    "netherite_sword",
+    "netherite_axe",
+    "netherite_helmet",
+    "netherite_chestplate",
+    "netherite_leggings",
+    "netherite_boots",
+    "book:mending:1",
+    "book:unbreaking:3",
+    "book:fortune:3",
+    "book:silk_touch:1",
+    "book:protection:4",
+    "book:sharpness:5",
+    "netherite_shovel",
+    "netherite_hoe",
+    "book:efficiency:5",
+    "book:looting:3",
+    "book:feather_falling:4",
+    "book:swift_sneak:3",
+    "book:soul_speed:3",
+    "book:wind_burst:3",
+    "book:riptide:3",
+    "book:loyalty:3",
+    "book:infinity:1",
+    "book:power:5"
+  ]
+}

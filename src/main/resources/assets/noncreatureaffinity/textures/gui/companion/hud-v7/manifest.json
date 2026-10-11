@@ -1,0 +1,349 @@
+{
+  "version": 7,
+  "approved_preview": "../HUD-空手与手持总览-v7-锚点对齐.png",
+  "source": "../../../统一关系挂边-v1/主界面-属性积液图标合入-v6.png",
+  "frame_parts": [
+    {
+      "id": "tl",
+      "path": "assets/frame/tl.png",
+      "size": [
+        260,
+        75
+      ],
+      "source_rect": [
+        65,
+        40,
+        325,
+        115
+      ],
+      "source_edge_anchor": [
+        76,
+        60
+      ],
+      "local_anchor": [
+        11,
+        20
+      ],
+      "sha256": "51b381442bc6c83c2cfeac3f921ded5d3804e02774bd36ba9451854e08129f54"
+    },
+    {
+      "id": "tr",
+      "path": "assets/frame/tr.png",
+      "size": [
+        320,
+        110
+      ],
+      "source_rect": [
+        1190,
+        40,
+        1510,
+        150
+      ],
+      "source_edge_anchor": [
+        1498,
+        60
+      ],
+      "local_anchor": [
+        308,
+        20
+      ],
+      "sha256": "449efe50393aa7ee7cdcc745633583a3830399899477408c3317894fa33de975"
+    },
+    {
+      "id": "left",
+      "path": "assets/frame/left.png",
+      "size": [
+        30,
+        210
+      ],
+      "source_rect": [
+        64,
+        236,
+        94,
+        446
+      ],
+      "source_edge_anchor": [
+        76,
+        310
+      ],
+      "local_anchor": [
+        12,
+        74
+      ],
+      "sha256": "6f3057261ebcf17c101e35f2db370271f1ee82c56e9682c52f47ae488ac0ca6a"
+    },
+    {
+      "id": "right",
+      "path": "assets/frame/right.png",
+      "size": [
+        35,
+        107
+      ],
+      "source_rect": [
+        1475,
+        383,
+        1510,
+        490
+      ],
+      "source_edge_anchor": [
+        1498,
+        430
+      ],
+      "local_anchor": [
+        23,
+        47
+      ],
+      "sha256": "dc725818daf72b21144ef63e5a4f86b9a8f73790e9f5c453a771da7c50069c4c"
+    },
+    {
+      "id": "br",
+      "path": "assets/frame/br.png",
+      "size": [
+        160,
+        193
+      ],
+      "source_rect": [
+        1352,
+        744,
+        1512,
+        937
+      ],
+      "source_edge_anchor": [
+        1498,
+        890
+      ],
+      "local_anchor": [
+        146,
+        146
+      ],
+      "sha256": "ebc54df717f430f40ea8893be36f71412af118814172cc24dae1da7f020f0dba"
+    }
+  ],
+  "relationships": {
+    "first": [],
+    "stranger": [
+      {
+        "part": "tl",
+        "target": [
+          "x",
+          "y"
+        ],
+        "scale": 0.2
+      }
+    ],
+    "familiar": [
+      {
+        "part": "tl",
+        "target": [
+          "x",
+          "y"
+        ],
+        "scale": 0.3
+      },
+      {
+        "part": "tr",
+        "target": [
+          "x+w-1",
+          "y"
+        ],
+        "scale": 0.3
+      }
+    ],
+    "close": [
+      {
+        "part": "tl",
+        "target": [
+          "x",
+          "y"
+        ],
+        "scale": 0.39
+      },
+      {
+        "part": "tr",
+        "target": [
+          "x+w-1",
+          "y"
+        ],
+        "scale": 0.39
+      },
+      {
+        "part": "left",
+        "target": [
+          "x",
+          "y+h*0.46"
+        ],
+        "scale": 0.24
+      },
+      {
+        "part": "br",
+        "target": [
+          "x+w-1",
+          "y+h-1"
+        ],
+        "scale": 0.28
+      }
+    ],
+    "friend": [
+      {
+        "part": "tl",
+        "target": [
+          "x",
+          "y"
+        ],
+        "scale": 0.48
+      },
+      {
+        "part": "tr",
+        "target": [
+          "x+w-1",
+          "y"
+        ],
+        "scale": 0.48
+      },
+      {
+        "part": "left",
+        "target": [
+          "x",
+          "y+h*0.46"
+        ],
+        "scale": 0.32
+      },
+      {
+        "part": "br",
+        "target": [
+          "x+w-1",
+          "y+h-1"
+        ],
+        "scale": 0.38
+      },
+      {
+        "part": "right",
+        "target": [
+          "x+w-1",
+          "y+h*0.52"
+        ],
+        "scale": 0.3
+      }
+    ]
+  },
+  "rounding": "nearest ties to even (Python round); use Math.rint or equivalent for exact match",
+  "draw_formula": "destSize=round(sourceSize*partScale*layoutScale); pos=round(target-localAnchor*partScale*layoutScale)",
+  "layout_scale": "1 reproduces 1600x1060 overview coordinates; choose common scale for actual GUI; not actual game GUI units",
+  "panel_base": "dark purple #211624; rose #AD5A83 outline; illustration border 2px; runtime may reuse existing confirmed skin",
+  "bar_overlays": [
+    {
+      "stage": "first",
+      "path": "assets/affinity/first-decoration.png",
+      "size": [
+        200,
+        22
+      ],
+      "crop_before_resize": null,
+      "draw": false,
+      "target_width": "bar_width",
+      "target_height": "round((source_height-crop_top)*bar_width/200)",
+      "target_position": [
+        "bar_x",
+        "bar_y-3*layout_scale"
+      ],
+      "sha256": "6a9110810cd35ffb63afe49ee2159c54139a3eecffd3224c889962b30eda6c4b"
+    },
+    {
+      "stage": "stranger",
+      "path": "assets/affinity/stranger-decoration.png",
+      "size": [
+        200,
+        22
+      ],
+      "crop_before_resize": [
+        0,
+        4,
+        200,
+        22
+      ],
+      "draw": true,
+      "target_width": "bar_width",
+      "target_height": "round((source_height-crop_top)*bar_width/200)",
+      "target_position": [
+        "bar_x",
+        "bar_y-3*layout_scale"
+      ],
+      "sha256": "84a5c29d97ed029c13250d56991b8e71c5591dcbad5bf8313efe31ea08ad3762"
+    },
+    {
+      "stage": "familiar",
+      "path": "assets/affinity/familiar-decoration.png",
+      "size": [
+        200,
+        22
+      ],
+      "crop_before_resize": [
+        0,
+        3,
+        200,
+        22
+      ],
+      "draw": true,
+      "target_width": "bar_width",
+      "target_height": "round((source_height-crop_top)*bar_width/200)",
+      "target_position": [
+        "bar_x",
+        "bar_y-3*layout_scale"
+      ],
+      "sha256": "55ef7c608916aad6dfe78e777699d4d01b57005b108859291537fa353a8fa243"
+    },
+    {
+      "stage": "close",
+      "path": "assets/affinity/close-decoration.png",
+      "size": [
+        200,
+        22
+      ],
+      "crop_before_resize": [
+        0,
+        3,
+        200,
+        22
+      ],
+      "draw": true,
+      "target_width": "bar_width",
+      "target_height": "round((source_height-crop_top)*bar_width/200)",
+      "target_position": [
+        "bar_x",
+        "bar_y-3*layout_scale"
+      ],
+      "sha256": "b2cd109e76a1d74f430d2de24e8b6fd194e5b41a0fd0032f48aba27729ba0cfb"
+    },
+    {
+      "stage": "friend",
+      "path": "assets/affinity/friend-decoration.png",
+      "size": [
+        200,
+        22
+      ],
+      "crop_before_resize": [
+        0,
+        2,
+        200,
+        22
+      ],
+      "draw": true,
+      "target_width": "bar_width",
+      "target_height": "round((source_height-crop_top)*bar_width/200)",
+      "target_position": [
+        "bar_x",
+        "bar_y-3*layout_scale"
+      ],
+      "sha256": "1539f9a4d3700dba39b33db49aa5cc960ca37e1e0e05f2cf94a368cd446d4051"
+    }
+  ],
+  "health_overlay": false,
+  "numeric_data": "all preview numbers illustrative; unavailable counters remain unknown",
+  "target_affinity_denominator": "configured affinity maximum; does not alter friendship threshold",
+  "request_progress_denominator": "runtime configured familiar-stage threshold (default 25); not friend threshold or legacy independent request threshold",
+  "runtime_gui_verified": false,
+  "request_policy": {
+    "direct_interaction_off": "at or above configured familiar threshold: request confirmation; retain other restrictions",
+    "direct_interaction_on": "positive affinity direct interaction; retain other restrictions"
+  }
+}

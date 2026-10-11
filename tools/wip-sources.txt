@@ -1,0 +1,5 @@
+# Sources to exclude from future release builds, one path per line.
+# 1.2.20 audit: all 14 former entries already exist in the supplied 1.2.19 JAR.
+# They are shipped features with active registrations/mixins, not work in progress.
+# Keeping their obsolete exclusions breaks release builds. No active exclusion remains.
+# Evidence and scope: HANDOVER-1.2.20.md.

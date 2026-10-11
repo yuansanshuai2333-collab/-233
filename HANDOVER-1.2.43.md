@@ -1,0 +1,12 @@
+# 1.2.43 handover
+User approved B + 2: peaceful friend behavior retaining self-defence and existing approved combat, plus HUD server validation / per-request identities. Implemented and delivered, no pending permission.
+RelationshipBehavior now gates unrelated autonomous targets for non-native-pet friends at live threshold; friend player damage protected, stranger rules retain recent retaliation. Warden isValidTarget/updateAttackTarget mixins, brain-aware target writes/clears. Wither targeted shot guard and redirect for random coordinate shots only. Damage hook covers attributable sonic/projectile damage. Existing combat services claim before target write; defender native eligibility uses narrowly scoped try/finally candidate authorization, tested for leakage.
+HUD uses request_state_v2 with monotonically increasing request ID, server per-player snapshot, every-tick validity check and 20-tick refresh. Client 100-tick lease hides on silence, permits delayed recovery, rejects canceled/older identities, pauses with MinecraftClient.isPaused; disconnect resets identity. RequestSystem only adds read-only isWaitingFor ownership helper. Canceled extra-gain feature remains canceled.
+542 unit tests / 78 suites / zero failures or skipped. 87 server probes including real Wither skull emission and 300 idle mobTick calls; 5 standalone/no-NoN checks. Artifact contains no probe. Production src matches build src. Isolated build still I:\DSH\work\audit-1.2.39-recheck.
+Delivery: H:\杂事\自然关系-1.2.43修复\交付-1.2.43\naturalrelationship-1.2.43+1.21.11.jar
+SHA256: 136B3B450DB003A7B718450FE73655546A393A38CAE157341283757736336207
+Both multiplayer clients and server must update; old HUD protocol intentionally not reused. No real client HUD/two-client/full-modpack playtest, no actual game instance changed. Environmental effects and damage with no attributable mob source not made universally immune. Optional NoN tested absent. Baseline/logs/probes under delivery parent.
+
+## Subsequent whole-mod review
+No new confirmed reproducible bugs; production source unchanged and forced rebuilt JAR byte-identical. 542 unit tests / 78 suites; expanded server checks 95/95, standalone 5/5. Eight new probes cover two-player HUD state isolation, same-mob identity replacement, request ownership changes, disconnect isolation, actual PEACEFUL difficulty plus checkDespawn clearing both requesters/requests/display snapshots. No real clients attached. Evidence: H:\杂事\自然关系-1.2.43整体审查. Keep 1.2.43, no version bump. Final report and empty finding list saved.
+

@@ -1,0 +1,27 @@
+{
+	"required": false,
+	"package": "com.nonid.affinity.non.mixin",
+	"compatibilityLevel": "JAVA_21",
+    "mixinExtras": { "minVersion": "0.5.0" },
+	"plugin": "com.nonid.affinity.non.mixin.NonIntegrationMixinPlugin",
+	"mixins": [
+		"NonNaturalEndMixin",
+        "NonNativeStartIntentMixin",
+        "NonNativeEventContextMixin",
+        "NonDebugStartMixin",
+        "NativeSelectionSessionAccessor",
+        "NativeSelectionChoiceAccessor",
+        "NonSelectionReplyMixin",
+        "NonBirthFamilyMixin",
+        "NonPregnancyIdentityMixin",
+        "NonPregnancyHatchAccess",
+        "NonPregnancyEggIdentityMixin",
+        "NonVariantStorageMixin",
+        "NonEggVariantStorageMixin",
+		"NonAttackEscapeMixin",
+        "NonStartFailureMessageMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -1,0 +1,11 @@
+package com.nonid.affinity.audit;
+import com.nonid.affinity.config.AffinityConfig;
+import com.nonid.affinity.service.RelationshipStages;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+class TenRoundConfigTest {
+ @Test void r2EveryCustomThresholdHasExactTransition(){for(int friend=3;friend<100;friend+=7){var c=new AffinityConfig();c.maxAffinity=friend+5;c.friendThreshold=friend;c.controlThreshold=Math.max(2,friend/2);c.familiarThreshold=1;c.sanitize();assertFalse(RelationshipStages.friend(friend-1,c));assertTrue(RelationshipStages.friend(friend,c));assertEquals(RelationshipStages.Stage.NEW,RelationshipStages.of(0,c));assertTrue(RelationshipStages.controls(c.controlThreshold,c));}}
+ @Test void r2SanitizedPermissionsAreMonotonicAcrossMixedInputs(){var random=new java.util.Random(1402);for(int i=0;i<300;i++){var c=new AffinityConfig();c.maxAffinity=1+random.nextInt(200);c.friendThreshold=random.nextInt(400)-100;c.controlThreshold=random.nextInt(400)-100;c.familiarThreshold=random.nextInt(400)-100;c.sanitize();int prev=0;for(int n=0;n<=c.maxAffinity;n++){int next=RelationshipStages.of(n,c).ordinal();assertTrue(next>=prev);prev=next;}}}
+ @Test void r2DraftEveryPrimitiveIsDetached() throws Exception {var c=new AffinityConfig();var d=c.copy();for(var f:AffinityConfig.class.getFields()){if(java.lang.reflect.Modifier.isStatic(f.getModifiers()))continue;Object old=f.get(c);if(f.getType()==boolean.class)f.setBoolean(d,!f.getBoolean(d));else if(f.getType()==int.class)f.setInt(d,f.getInt(d)+1);else if(f.getType()==double.class)f.setDouble(d,f.getDouble(d)+.25);assertEquals(old,f.get(c),f.getName());}}
+ @Test void r2ExtremeSanitizationIsIdempotent(){var c=new AffinityConfig();c.maxAffinity=Integer.MIN_VALUE;c.minAffinity=Integer.MAX_VALUE;c.friendThreshold=Integer.MAX_VALUE;c.controlThreshold=Integer.MIN_VALUE;c.familiarThreshold=Integer.MAX_VALUE;c.requestChance=Double.NaN;c.sanitize();var first=c.copy();c.sanitize();assertEquals(first.maxAffinity,c.maxAffinity);assertEquals(first.friendThreshold,c.friendThreshold);assertEquals(first.requestChance,c.requestChance);assertFalse(RelationshipStages.friend(0,c));assertTrue(RelationshipStages.friend(1,c));}
+}

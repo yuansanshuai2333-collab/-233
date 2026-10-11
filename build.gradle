@@ -1,0 +1,278 @@
+plugins {
+    id 'fabric-loom' version "${loom_version}"
+    id 'maven-publish'
+}
+
+version = "${mod_version}+${minecraft_version}"
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
+    maven {
+        name = 'TerraformersMC'
+        url = 'https://maven.terraformersmc.com/releases/'
+    }
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    // Optional JEI integration. Only its Fabric entrypoint loads these client classes.
+    // Kept local and pinned for reproducible/offline builds; never bundled in the release JAR.
+    modCompileOnly files('libs/jei-1.21.11-fabric-27.4.0.21.jar')
+    if (project.hasProperty('jeiDev')) {
+        modLocalRuntime files('libs/jei-1.21.11-fabric-27.4.0.21.jar')
+    }
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings "net.fabricmc:yarn:${yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${loader_version}"
+
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+
+    // GeckoLib 5 —— NeedsOfNature 的硬依赖
+    modImplementation "maven.modrinth:geckolib:${geckolib_version}"
+
+    // NeedsOfNature 本体：编译期 + 本地开发运行环境（放在 libs/ 目录）
+    // 通过 modCompileOnly 直接编译到它的公开 API；它是可选运行时依赖。
+    if (file("libs/${non_jar}").exists()) {
+        modCompileOnly files("libs/${non_jar}")
+        modLocalRuntime files("libs/${non_jar}")
+    } else {
+        logger.warn("[NoN Affinity] 未找到 libs/${non_jar}，NON 相关代码将无法编译。")
+    }
+
+    // ModMenu 集成：用本机已有的 jar 做编译依赖，避免额外下载；运行时为可选依赖。
+    if (file('libs/modmenu-compile-only.jar').exists()) {
+        modCompileOnly files('libs/modmenu-compile-only.jar')
+    } else {
+        logger.warn('[NoN Affinity] libs/modmenu-compile-only.jar not found; ModMenu integration will not compile.')
+    }
+
+    // 单元测试：只覆盖纯逻辑（NBT 往返、裁剪、配置修正），不需要启动游戏。
+    //
+    // NON 本体也放进测试类路径，**只**为了让 NonAttackPayloadContractTest 直接对 NON 自己的类断言
+    // （攻击会话数据有两种形状、PVP 载荷的构造函数不接受 null）。它不是编译依赖，测试只反射读取
+    // `NonAnimationSessionData`（无静态初始化、不触碰任何游戏类）。缺包时该测试整体跳过。
+    if (file("libs/${non_jar}").exists()) {
+        testImplementation files("libs/${non_jar}")
+    }
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'failed', 'skipped'
+        exceptionFormat 'full'
+    }
+}
+
+// Quick-play into a world ONLY when one is explicitly requested AND it actually exists.
+//
+// Previously the client run hardcoded a default world name, so `runClient` always passed
+// --quickPlaySingleplayer with a name that need not exist, and adding the flag again on the command line
+// produced two conflicting values (one of them the wrong world). Now:
+//   - no -PdevWorld  -> the client opens its main menu;
+//   - -PdevWorld=<name> naming an existing world -> quick play into that world;
+//   - -PdevWorld=<name> missing -> the build FAILS with a clear message instead of silently opening the
+//     main menu or, worse, creating a fresh world with that name.
+//
+// A world is matched by its DIRECTORY name OR by the LevelName stored in its level.dat, because Minecraft
+// disambiguates duplicate world names by appending " (1)", " (2)" to the FOLDER while the in-game name
+// stays the same. Matching only the folder hides that, and matching only the in-game name makes the folder
+// name useless to the caller. No existing save is deleted, renamed or overwritten by any of this.
+
+/** The LevelName recorded in a level.dat (gzipped NBT), or null when it cannot be read. */
+def readLevelName = { File levelDat ->
+    if (!levelDat.isFile()) {
+        return null
+    }
+    try {
+        def bytes = levelDat.bytes
+        def header = new String(bytes, 0, Math.min(2, bytes.length), 'ISO-8859-1')
+        if (header == '\u001f\u008b') {
+            // Gzip stream: inflate before scanning for the tag.
+            def inflated = new java.util.zip.GZIPInputStream(new ByteArrayInputStream(bytes))
+            bytes = inflated.withStream { it.bytes }
+        }
+        def nameMarker = 'LevelName'.getBytes('UTF-8')
+        for (int i = 0; i + nameMarker.length + 3 <= bytes.length; i++) {
+            boolean match = true
+            for (int j = 0; j < nameMarker.length; j++) {
+                if (bytes[i + j] != nameMarker[j]) {
+                    match = false
+                    break
+                }
+            }
+            if (!match) {
+                continue
+            }
+            // TAG_String layout: tag(1) name-len(2) name level-len(2) value
+            int cursor = i + nameMarker.length
+            int valueLength = ((bytes[cursor] & 0xFF) << 8) | (bytes[cursor + 1] & 0xFF)
+            if (valueLength > 0 && cursor + 2 + valueLength <= bytes.length) {
+                return new String(bytes, cursor + 2, valueLength, 'UTF-8')
+            }
+        }
+    } catch (Exception ignored) {
+        // An unreadable level.dat must not fail the whole build; the folder name is still tried.
+    }
+    return null
+}
+
+def devWorldName = project.findProperty('devWorld')
+def devWorldRequested = devWorldName != null && !devWorldName.toString().trim().isEmpty()
+def savesDir = file('run/saves')
+def worldMatchesDir = { File dir, String wanted ->
+    dir.isDirectory() && new File(dir, 'level.dat').isFile()
+            && (dir.name == wanted || wanted == readLevelName(new File(dir, 'level.dat')))
+}
+def matchingWorld = null
+if (devWorldRequested && savesDir.isDirectory()) {
+    matchingWorld = savesDir.listFiles().find { worldMatchesDir(it, devWorldName.toString()) }
+}
+if (devWorldRequested && matchingWorld == null) {
+    def available = savesDir.isDirectory()
+            ? savesDir.listFiles().findAll { new File(it, 'level.dat').isFile() }
+                    .collect { it.name + ' (' + readLevelName(new File(it, 'level.dat')) + ')' }
+                    .sort().join(', ')
+            : '(no run/saves directory)'
+    throw new GradleException(
+            "[NoN Affinity] -PdevWorld=${devWorldName} was given, but no world matches that name. "
+                    + "Available worlds - folder (in-game name): ${available}. "
+                    + "Pass an existing world, or omit -PdevWorld to open the main menu.")
+}
+if (matchingWorld != null) {
+    logger.lifecycle("[NoN Affinity] quick-playing into world folder '${matchingWorld.name}'"
+            + " (in-game name '${readLevelName(new File(matchingWorld, 'level.dat'))}')")
+}
+
+loom {
+    // Accept the Minecraft EULA for the local development server so it can boot unattended.
+    runs {
+        server {
+            property 'fabric.autoTest', 'true'
+        }
+        client {
+            // No hardcoded world: see the devWorld handling above.
+            if (matchingWorld != null) {
+                programArgs '--quickPlaySingleplayer', matchingWorld.name
+            }
+            property 'fabric.autoTest', 'true'
+        }
+    }
+}
+
+processResources {
+    inputs.property 'version', project.version
+
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = 'UTF-8'
+    it.options.release = 21
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+// ---------------------------------------------------------------------------
+// 开发中源码（work in progress）：发布构建排除它们，且**不依赖手工挪动文件**。
+//
+// 背景：1.1.1 的交付里混进了 5 个「零价交易」开发中的类——当时靠"发布前记得把源码挪出去"，
+// 一旦忘记，构建照样成功、测试照样通过，只有比对 JAR 条目才能发现。
+//
+// 现在规则只有一处声明：`tools/wip-sources.txt`。构建脚本和发布门 `tools/release-gate.mjs`
+// 都读它，因此两边不可能对不上。
+//
+//   gradle clean build                → 开发构建，包含开发中源码（这样它的单元测试会跑）
+//   gradle clean build -Pwip=false    → 发布构建，排除清单里的源码，并自动执行发布门
+//
+// 默认是"包含"，所以忘写 -Pwip=false 得到的是一份开发构建，而不是悄悄少编译代码的构建；
+// 这种产物会被发布门直接判为失败（门脚本对 JAR 再查一遍），因此遗漏清单条目也无法溜进交付。
+// ---------------------------------------------------------------------------
+def wipListFile = file('tools/wip-sources.txt')
+def includeWip = project.findProperty('wip')?.toString() != 'false'
+def wipSources = []
+if (wipListFile.isFile()) {
+    wipSources = wipListFile.readLines()
+            .collect { it.trim() }
+            .findAll { !it.isEmpty() && !it.startsWith('#') }
+} else if (!includeWip) {
+    // 说好了要发布，却读不到"哪些源码不该发布"：宁可失败，也不能猜。
+    throw new GradleException("[NoN Affinity] -Pwip=false 已指定，但 ${wipListFile} 不存在："
+            + "发布构建无法得知要排除哪些开发中源码，拒绝继续。")
+}
+if (!includeWip) {
+    logger.lifecycle("[NoN Affinity] 发布构建：排除 tools/wip-sources.txt 列出的 "
+            + "${wipSources.size()} 项开发中源码（含同名单元测试）")
+}
+
+sourceSets {
+    if (!includeWip) {
+        main {
+            java {
+                wipSources.each { path -> exclude path }
+            }
+        }
+        test {
+            java {
+                // 约定：开发中类 "…/Foo.java" 的单元测试是 "…/FooTest.java"。
+                // 不同名时测试源码会编译失败——这是**响亮**的失败，好过静默漏掉。
+                wipSources.each { path -> exclude path.replace('.java', 'Test.java') }
+            }
+        }
+    }
+}
+
+if (!includeWip) {
+    def gateScript = file('tools/release-gate.mjs')
+    def gateIsWindows = System.getProperty('os.name').toLowerCase().contains('windows')
+    def releaseGate = tasks.register('releaseGate', Exec) {
+        group = 'verification'
+        description = '对本次发布构建产出的 JAR 运行 tools/release-gate.mjs（遇错即失败）。'
+        // 必须是 remapJar（build/libs 下可交付的那份），不是 jar 任务——Loom 把 jar 输出到
+        // build/devlibs 且文件名带 -dev 后缀，门禁会（正确地）把它判为构建副产物。
+        dependsOn tasks.named('remapJar')
+        def builtJar = tasks.named('remapJar').get().archiveFile.get().asFile
+        inputs.file gateScript
+        inputs.file wipListFile
+        inputs.file builtJar
+        commandLine(gateIsWindows
+                ? ['cmd', '/c', 'node', gateScript.absolutePath, builtJar.absolutePath]
+                : ['node', gateScript.absolutePath, builtJar.absolutePath])
+    }
+    // 发布构建自动自检：`gradle clean build -Pwip=false` 结束时，门必须通过。
+    tasks.named('build') { finalizedBy releaseGate }
+}
+
+jar {
+    from('LICENSE') {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}
+

@@ -1,0 +1,28 @@
+# Gradle and build outputs
+.gradle/
+build/
+
+# Local runtime and generated game data
+run/
+logs/
+.codex-gradle-home/
+.codex-temp/
+
+# IDE and OS files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local secrets and machine-specific files
+*.local
+local.properties
+
+# Crash dumps and transient diagnostics
+hs_err_pid*.log
+replay_pid*.log
+
+# Local Minecraft instance and review scratch
+1.21.11-Fabric 0.19.5/
+codex-review/
